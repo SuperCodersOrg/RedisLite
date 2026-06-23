@@ -6,7 +6,7 @@ The primary objective of Redis Lite is to create a scalable and efficient storag
 ## SuperCoders Collections Library
 Before Redis Lite, introduce the custom library.
 ### Dynamic Array
-Purpose
+#### Purpose
 Provides resizable contiguous storage similar to vector.
 #### Why Dynamic Array over simple array?
 It utilize memory efficiently because dynamic array increase its size when needed and need not to allocate large memory like a simple array. 
@@ -55,26 +55,208 @@ free(arr);
 arr = nullptr; 
 
 
-### Doubly Linked List
-Purpose
-Stores nodes through pointer connections.
-#### Why Doubly Linked List?
-Chosen over Singly Linked List because LFU cache requires:
-Forward traversal 
-Backward traversal 
-O(1) node removal 
+### Singly Linked List
+#### Purpose
+Provides dynamic non-contiguous storage where elements are connected using pointers.
+#### Why Linked List over Dynamic Array?
+Linked List allows efficient insertion and deletion without shifting elements. Memory is allocated only when needed, so no pre-allocation or resizing is required.
 #### Methods:-
-insertFront - O(1) , deleteFront - O(1) , search - O(n) , insert(index) O(n) 
+#### 1.) append() - O(n)
+O(n) because in a Singly Linked List we need to traverse from head to the last node before inserting the new node.
+#### 2.) get(index) - O(n)
+O(n) because we must traverse node by node until the required index is reached.
+#### 3.) insert(index) - O(n)
+O(n) because in the worst case we need to traverse n nodes to reach the insertion position.
+#### 4.) remove(index) - O(n)
+O(n) because in the worst case we need to traverse n nodes to reach the node before the one being deleted.
+#### 5.) size() - O(1)
+O(1) because the number of nodes is maintained in a size variable.
+
+#### Generic Design
+template<typename T>
+class LinkedList;
+
+#### Why Generic?
+A generic implementation allows the same Linked List to store different data types without modifying the underlying code and also works for user-defined data types.
+#### Examples
+LinkedList<int>
+LinkedList<string>
+LinkedList<Node*>
+LinkedList<Entry<K,V>>
+
+
+
+Internal Structure
+Head
+ ↓
+[Data|Next] → [Data|Next] → [Data|Next] → NULL
+
+Node Structure
+template<typename T>
+struct Node {
+    T data;
+    Node* next;
+};
+
+
+#### Memory Management
+Initial State
+head = nullptr;
+size = 0;
+
+Reason
+No memory is allocated until the first element is inserted, preventing memory wastage.
+Allocation Strategy
+A new node is created whenever a new element is inserted.
+Node<T>* newNode = new Node<T>();
+Alternative by malloc:
+Node<T>* node = (Node<T>*)malloc(sizeof(Node<T>));
+new (&node->data) T(); // Construct T
+we call constructor of T because sizeof(Node<T>) give space that require to store address.
+Benefits
+Memory allocated only when needed and due to malloc need not to call constructor for node.
+
+#### Constructor  
+O(1) — Zero memory allocation occurs. it strictly assigns head = nullptr and size = 0 
+Initialize:
+head = nullptr;
+size = 0;
+No node memory is allocated initially.
+
+#### Copy Constructor
+O(n) — It must traverse all n nodes of the original list from head to tail, allocating a new node and copying the data for each step. 
+Create a new Linked List and perform a deep copy by creating new nodes and copying data from each node of the original list.
+
+#### Destructor
+O(n) — It must traverse the list node-by-node from head to tail, explicitly calling the data destructor and using free() on exactly n individual nodes. 
+Traverse the entire list and delete every node.
+Using delete:
+while(head){
+    Node<T>* temp = head;
+    head = head->next;
+    delete temp;
+}
+Alternative using free:
+while(head){
+    Node<T>* temp = head;
+    head = head->next;
+ temp->data.~T();
+free(temp); 
+we call destructor of T because we need to dellocate heap memory which is taken by non primitive datatype.
+
+}
+Finally:
+head = nullptr;
+size = 0;
+
+### Doubly Linked List
+#### Purpose
+Provides dynamic non-contiguous storage where elements are connected using both next and previous pointers, allowing traversal in both directions.
+#### Why Doubly Linked List over Singly Linked List?
+Doubly Linked List supports bidirectional traversal and makes deletion easier because each node maintains a pointer to its previous node.
+ Reusing the `LinkedList` class through inheritance cause memory leak because during object creation of double list it take extra memory for linkedlist to use its methods.
+
+#### Methods:-
+#### 1.) append() - O(1)
+O(1) because a tail pointer is maintained, allowing direct insertion at the end without traversal.
+#### 2.) get(index) - O(n)
+O(n) because nodes must still be traversed to reach the required index.
+#### 3.) insert(index) - O(n)
+O(n) because in the worst case we need to traverse n nodes to reach the insertion position.
+#### 4.) remove(index) - O(n)
+O(n) because in the worst case we need to traverse n nodes to reach the node being removed.
+#### 5.) size() - O(1)
+O(1) because the number of nodes is maintained in a size variable.
+
 #### Generic Design
 template<typename T>
 class DoublyLinkedList;
-The generic implementation allows the same linked list to store different data types and be reused throughout the SuperCoders Collections Library, including HashMap bucket chains and LFU frequency lists.
+
+Why Generic?
+A generic implementation allows the same Doubly Linked List to store different data types without modifying the underlying code and also works for user-defined data types.
+Examples
+DoublyLinkedList<int>
+DoublyLinkedList<string>
+DoublyLinkedList<Node*>
+DoublyLinkedList<Entry<K,V>>
+
+
+#### Internal Structure
+NULL ← [Prev|Data|Next] ⇄ [Prev|Data|Next] ⇄ [Prev|Data|Next] → NULL
+
+Head points to the first node and Tail points to the last node.
+
+#### Node Structure
+template<typename T>
+struct Node {
+    T data;
+    Node* next;
+    Node* prev;
+};
+
+
 #### Memory Management
-Each node stores:
-Data
-Next Pointer
-Previous Pointer
-Nodes are dynamically allocated during insertion and released during deletion.
+Initial State
+head = nullptr;
+tail = nullptr;
+size = 0;
+
+Reason
+No memory is allocated until the first element is inserted, preventing memory wastage.
+Allocation Strategy
+A new node is created whenever a new element is inserted.
+Node<T>* newNode = new Node<T>();
+
+Alternative by malloc:
+Node<T>* node = (Node<T>*)malloc(sizeof(Node<T>));
+
+new (&node->data) T(); // Construct T
+
+we call constructor of T because sizeof(Node<T>) give space that require to store address.
+
+Benefits
+Memory allocated only when needed.
+No resizing operation.
+Forward and backward traversal supported.
+Efficient insertion and deletion at both ends.
+
+#### Constructor
+O(1) — Zero memory allocation occurs; it strictly assigns head = nullptr, tail = nullptr, and size = 0. 
+Initialize:
+head = nullptr;
+tail = nullptr;
+size = 0;
+
+No node memory is allocated initially.
+
+#### Copy Constructor
+O(n) — Just like the singly list, it must traverse all n nodes of the original list, allocating new nodes and establishing both next and prev links for each. 
+Create a new Doubly Linked List and perform a deep copy by creating new nodes and copying data from each node of the original list while maintaining both next and prev links.
+
+#### Destructor
+O(n) — Just like the singly list, it must traverse and destroy all n nodes one at a time, calling the data destructor and free() for each node to prevent memory leaks. 
+Traverse the entire list and delete every node.
+Using delete:
+while(head){
+    Node<T>* temp = head;
+    head = head->next;
+    delete temp;
+}
+
+Alternative using free:
+while(head){
+    Node<T>* temp = head;
+    head = head->next;
+   temp->data.~T();
+free(temp); 
+we call destructor of T because we need to dellocate heap memory which is taken by non primitive datatype.
+}
+
+Finally:
+head = nullptr;
+tail = nullptr;
+size = 0;
+
 
 ### Generic HashMap
 Purpose

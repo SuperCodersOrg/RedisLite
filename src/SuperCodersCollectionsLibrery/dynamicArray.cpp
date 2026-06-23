@@ -1,6 +1,5 @@
-#include <cstdlib> 
-
-
+#include <cstdlib>
+#include <new>
 template<typename T>
 class DynamicArray{
     private:
@@ -9,11 +8,11 @@ class DynamicArray{
         int capacity;
         void resize(){
             capacity *= 2;
-            T* newArr = new T[capacity];
+            T* newArr = (T*)malloc(capacity*sizeof(T));
             for(int i = 0; i<size; i++){
-                newArr[i] = arr[i];
+                new(&newArr[i]) T(arr[i]);
             }
-            delete[] arr;
+            free(arr);
             arr = newArr;
         }
     public:
@@ -28,10 +27,13 @@ class DynamicArray{
             size = other.size;
             arr = (T*)malloc(capacity*sizeof(T));
             for(int i =0; i<size ;i++){
-                arr[i] = other.arr[i];
+                new(&arr[i]) T(other.arr[i]);
             }
         }
         ~DynamicArray(){
+            for(int i =0; i<size ;i++){
+                arr[i].~T();
+            }
             free(arr);
             arr = nullptr;
         }
@@ -39,7 +41,7 @@ class DynamicArray{
              if(size == capacity){
                 resize();
              }
-             arr[size] = val;
+             new(&arr[size]) T(val);
              size++;
         }
         T& get(int idx){
@@ -56,9 +58,9 @@ class DynamicArray{
                 resize();
             }
             for(int i = size-1; i>= idx; i--){
-                arr[i+1] = arr[i];
+                new(&arr[i+1]) T(arr[i]);
             }
-            arr[idx] = val;
+            new(&arr[idx]) T(val);
             size++;
         }
         void remove(int idx){
@@ -66,7 +68,7 @@ class DynamicArray{
                 throw "Index out of bounds";
             }
             for(int i = idx; i<size-1; i++){
-                arr[i] = arr[i+1];
+                new(&arr[i]) T(arr[i+1]);
             }
             size--;
         }
