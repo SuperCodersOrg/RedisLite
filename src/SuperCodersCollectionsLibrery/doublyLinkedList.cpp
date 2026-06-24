@@ -1,18 +1,21 @@
+#ifndef DOUBLY_LINKED_LIST_H
+#define DOUBLY_LINKED_LIST_H
+
 #include <cstdlib>
 #include <new>
 
 template<typename T>
-struct Node {
+struct DNode {
     T data;
-    Node* next;
-    Node* prev;
+    DNode* next;
+    DNode* prev;
 };
 
 template<typename T>
 class DoublyLinkedList {
 private:
-    Node<T>* head;
-    Node<T>* tail;
+    DNode<T>* head;
+    DNode<T>* tail;
     int size;
 
 public:
@@ -28,7 +31,7 @@ public:
         tail = nullptr;
         size = 0;
         
-        Node<T>* current = other.head;
+        DNode<T>* current = other.head;
         while (current) {
             append(current->data);
             current = current->next;
@@ -37,7 +40,7 @@ public:
 
     ~DoublyLinkedList() {
         while (head) {
-            Node<T>* temp = head;
+            DNode<T>* temp = head;
             head = head->next; 
             temp->data.~T();
             free(temp);
@@ -49,7 +52,7 @@ public:
 
         
     void append(T val) {
-        Node<T>* newNode = (Node<T>*)malloc(sizeof(Node<T>));
+        DNode<T>* newNode = (DNode<T>*)malloc(sizeof(DNode<T>));
         new (&newNode->data) T(val);
         newNode->next = nullptr;
         newNode->prev = nullptr;
@@ -71,7 +74,7 @@ public:
             throw "Index out of bounds";
         }
         
-        Node<T>* current;
+        DNode<T>* current;
         
         if (index < size / 2) {
             current = head;
@@ -97,7 +100,7 @@ public:
             return;
         }
 
-        Node<T>* newNode = (Node<T>*)malloc(sizeof(Node<T>));
+        DNode<T>* newNode = (DNode<T>*)malloc(sizeof(DNode<T>));
         new (&newNode->data) T(val);
 
         if (index == 0) {
@@ -112,7 +115,7 @@ public:
                 tail = newNode; 
             }
         } else {
-            Node<T>* current = head;
+            DNode<T>* current = head;
             for (int i = 0; i < index; i++) {
                 current = current->next;
             }
@@ -131,7 +134,7 @@ public:
             throw "Index out of bounds";
         }
 
-        Node<T>* temp = nullptr;
+        DNode<T>* temp = nullptr;
         
         if (index == 0) {
             temp = head;
@@ -150,7 +153,7 @@ public:
                 head = nullptr;
             }
         } else {
-            Node<T>* current = head;
+            DNode<T>* current = head;
             for (int i = 0; i < index; i++) {
                 current = current->next;
             }
@@ -168,3 +171,5 @@ public:
         return size;
     }
 };
+
+#endif // DOUBLY_LINKED_LIST_H

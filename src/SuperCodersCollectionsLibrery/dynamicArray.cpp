@@ -1,3 +1,6 @@
+#ifndef DYNAMIC_ARRAY_H
+#define DYNAMIC_ARRAY_H
+
 #include <cstdlib>
 #include <new>
 template<typename T>
@@ -76,3 +79,5 @@ class DynamicArray{
         return size;
     }
 };
+
+#endif // DYNAMIC_ARRAY_H

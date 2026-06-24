@@ -1,16 +1,19 @@
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
+
 #include <cstdlib>
 #include <new>
 
 template<typename T>
-struct Node {
+struct SNode {
     T data;
-    Node* next;
+    SNode* next;
 };
 
 template<typename T>
 class LinkedList {
 private:
-    Node<T>* head;
+    SNode<T>* head;
     int size;
 
 public:
@@ -23,7 +26,7 @@ public:
         head = nullptr;
         size = 0;
         
-        Node<T>* current = other.head;
+        SNode<T>* current = other.head;
         while (current) {
             append(current->data);
             current = current->next;
@@ -32,7 +35,7 @@ public:
 
     ~LinkedList() {
         while (head) {
-            Node<T>* temp = head;
+            SNode<T>* temp = head;
             head = head->next;
             temp->data.~T();
             free(temp);
@@ -42,14 +45,14 @@ public:
     }
 
     void append(T val) {
-        Node<T>* newNode = (Node<T>*)malloc(sizeof(Node<T>));
+        SNode<T>* newNode = (SNode<T>*)malloc(sizeof(SNode<T>));
         new (&newNode->data) T(val);
         newNode->next = nullptr;
 
         if (!head) {
             head = newNode;
         } else {
-            Node<T>* current = head;
+            SNode<T>* current = head;
             while (current->next) {
                 current = current->next;
             }
@@ -62,7 +65,7 @@ public:
         if (index < 0 || index >= size) {
             throw "Index out of bounds";
         }
-        Node<T>* current = head;
+        SNode<T>* current = head;
         for (int i = 0; i < index; i++) {
             current = current->next;
         }
@@ -75,14 +78,14 @@ public:
         }
 
        
-        Node<T>* newNode = (Node<T>*)malloc(sizeof(Node<T>));
+        SNode<T>* newNode = (SNode<T>*)malloc(sizeof(SNode<T>));
         new (&newNode->data) T(val);
 
         if (index == 0) {
             newNode->next = head;
             head = newNode;
         } else {
-            Node<T>* current = head;
+            SNode<T>* current = head;
             for (int i = 0; i < index - 1; i++) {
                 current = current->next;
             }
@@ -97,12 +100,12 @@ public:
             throw "Index out of bounds";
         }
 
-        Node<T>* temp = nullptr;
+        SNode<T>* temp = nullptr;
         if (index == 0) {
             temp = head;
             head = head->next;
         } else {
-            Node<T>* current = head;
+            SNode<T>* current = head;
             for (int i = 0; i < index - 1; i++) {
                 current = current->next;
             }
@@ -118,3 +121,5 @@ public:
         return size;
     }
 };
+
+#endif // LINKED_LIST_H
