@@ -34,7 +34,7 @@ Head (0x1000)                                Tail (0x1080)
 ```
 
 ## Section 4 — Code Reference
-- **Commit Hash:** N/A (Pending Local Commit)
+
 - **Filenames & Lines:**
   - `doublyLinkedList.cpp` (Lines 51-68: O(1) Tail appends & Placement new)
   - `dynamicArray.cpp` (Lines 1-3: Inclusion of `<new>`, and Lines 12-14: Placement new during resize)

@@ -115,11 +115,11 @@ public:
     
     V get(K key) const {
         int idx = getBucketIndex(key);
-        DoublyLinkedList<Entry<K, V>>& chain = buckets.get(idx);
+        DoublyLinkedList<Node<K, V>>& chain = buckets.get(idx);
         
         int chainSize = chain.getSize();
         for (int i = 0; i < chainSize; i++) {
-            Entry<K, V> entry = chain.get(i);
+            Node<K, V> entry = chain.get(i);
             if (entry.key == key) {
                 return entry.value;
             }
@@ -130,11 +130,11 @@ public:
     // Remove key-value pair. O(1) average, worst O(n) based on chain length
     void remove(K key) {
         int idx = getBucketIndex(key);
-        DoublyLinkedList<Entry<K, V>>& chain = buckets.get(idx);
+        DoublyLinkedList<Node<K, V>>& chain = buckets.get(idx);
         
         int chainSize = chain.getSize();
         for (int i = 0; i < chainSize; i++) {
-            Entry<K, V> entry = chain.get(i);
+            Node<K, V> entry = chain.get(i);
             if (entry.key == key) {
                 chain.remove(i);
                 size--;
