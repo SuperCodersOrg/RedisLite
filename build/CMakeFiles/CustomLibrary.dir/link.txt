@@ -1,0 +1,2 @@
+D:\cppCompliler\mingw64\bin\ar.exe qc libCustomLibrary.a CMakeFiles/CustomLibrary.dir/src/customLibrery/dynamicArray.cpp.obj CMakeFiles/CustomLibrary.dir/src/customLibrery/doublyLinkedList.cpp.obj CMakeFiles/CustomLibrary.dir/src/customLibrery/linkedList.cpp.obj CMakeFiles/CustomLibrary.dir/src/customLibrery/hashFunction.cpp.obj CMakeFiles/CustomLibrary.dir/src/customLibrery/hashMap.cpp.obj
+D:\cppCompliler\mingw64\bin\ranlib.exe libCustomLibrary.a

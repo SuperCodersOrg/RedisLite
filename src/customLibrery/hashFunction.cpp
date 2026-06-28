@@ -1,56 +1,42 @@
+#pragma once
 #ifndef HASH_FUNCTION_CPP
 #define HASH_FUNCTION_CPP
 
-#include <string>
+#include "hashFunction.h"
 
-class HashFunction {
-public:
+inline int HashFunction::generate(int key) const {
+    return key;
+}
 
-    int generate(int key) const {
-        return key;
+inline int HashFunction::generate(char key) const {
+    return key;
+}
+
+inline int HashFunction::generate(bool key) const {
+    return key ? 1 : 0;
+}
+
+inline int HashFunction::generate(const std::string& key) const {
+    size_t hash = 0;
+    for(char ch : key) {
+        hash = hash * 31 + ch;
     }
+    return hash;
+}
 
-    int generate(char key) const {
-        return key;
+template<typename T>
+int HashFunction::generate(const T& key) const {
+    return static_cast<int>(key.hashCode());
+}   
+
+template<typename T>
+int HashFunction::generateFallback(const T& key) const {
+    const unsigned char* bytes = reinterpret_cast<const unsigned char*>(&key);
+    int hash = 0;
+    for(size_t i = 0; i < sizeof(T); i++) {
+        hash = hash * 31 + bytes[i];
     }
-
-    int generate(bool key) const {
-        return key ? 1 : 0;
-    }
-
-    int generate(const std::string& key) const {
-
-        size_t hash = 0;
-
-        for(char ch : key) {
-            hash = hash * 31 + ch;
-        }
-
-        return hash;
-    }
-
-    // User-defined class with hashCode()
-    template<typename T>
-    int generate(const T& key) const
-    {
-        return static_cast<int>(key.hashCode());
-    }   
-
-    // Fallback byte-wise hash
-    template<typename T>
-    int generateFallback(const T& key) const {
-
-        const unsigned char* bytes =
-            reinterpret_cast<const unsigned char*>(&key);
-
-        int hash = 0;
-
-        for(size_t i = 0; i < sizeof(T); i++) {
-            hash = hash * 31 + bytes[i];
-        }
-
-        return hash;
-    }
-};
+    return hash;
+}
 
 #endif // HASH_FUNCTION_CPP

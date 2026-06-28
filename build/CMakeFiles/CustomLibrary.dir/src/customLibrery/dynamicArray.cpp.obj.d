@@ -1,0 +1,31 @@
+CMakeFiles/CustomLibrary.dir/src/customLibrery/dynamicArray.cpp.obj: \
+ D:\projects\RedisLite\src\customLibrery\dynamicArray.cpp \
+ D:/projects/RedisLite/include/dynamicArray.h \
+ D:/projects/RedisLite/src/customLibrery/dynamicArray.cpp \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/cstdlib \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++config.h \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/os_defines.h \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/pstl/pstl_config.h \
+ D:/cppCompliler/mingw64/include/stdlib.h \
+ D:/cppCompliler/mingw64/include/corecrt.h \
+ D:/cppCompliler/mingw64/include/_mingw.h \
+ D:/cppCompliler/mingw64/include/_mingw_mac.h \
+ D:/cppCompliler/mingw64/include/_mingw_secapi.h \
+ D:/cppCompliler/mingw64/include/vadefs.h \
+ D:/cppCompliler/mingw64/include/corecrt_wstdlib.h \
+ D:/cppCompliler/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/limits.h \
+ D:/cppCompliler/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/syslimits.h \
+ D:/cppCompliler/mingw64/include/limits.h \
+ D:/cppCompliler/mingw64/include/crtdefs.h \
+ D:/cppCompliler/mingw64/include/sec_api/stdlib_s.h \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/stdlib.h \
+ D:/cppCompliler/mingw64/include/malloc.h \
+ D:/cppCompliler/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/mm_malloc.h \
+ D:/cppCompliler/mingw64/include/errno.h \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/bits/std_abs.h \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/new \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/bits/exception.h \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/bits/version.h \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/bits/new_except.h \
+ D:/cppCompliler/mingw64/include/c++/16.1.0/bits/exception_defines.h

@@ -1,0 +1,4 @@
+D:/projects/RedisLite/build/CMakeFiles/CustomLibrary.dir
+D:/projects/RedisLite/build/CMakeFiles/RedisLite.dir
+D:/projects/RedisLite/build/CMakeFiles/edit_cache.dir
+D:/projects/RedisLite/build/CMakeFiles/rebuild_cache.dir
