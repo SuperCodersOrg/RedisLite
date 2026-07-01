@@ -95,6 +95,7 @@ void DynamicArray<T>::insert(int idx, T val){
     }
     for(int i = size-1; i>= idx; i--){
         new(&arr[i+1]) T(arr[i]);
+        arr[i].~T();
     }
     new(&arr[idx]) T(val);
     size++;
@@ -105,10 +106,11 @@ void DynamicArray<T>::remove(int idx){
     if(idx<0 || idx >= size){
         throw "Index out of bounds";
     }
+    arr[idx].~T();
     for(int i = idx; i<size-1; i++){
         new(&arr[i]) T(arr[i+1]);
+        arr[i+1].~T();
     }
-    arr[size-1].~T();
     size--;
 }
 

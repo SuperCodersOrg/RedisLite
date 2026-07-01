@@ -223,6 +223,19 @@ LinkedListTests/fast:
 .PHONY : LinkedListTests/fast
 
 #=============================================================================
+# Target rules for targets named DoublyLinkedListTests
+
+# Build rule for target.
+DoublyLinkedListTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 DoublyLinkedListTests
+.PHONY : DoublyLinkedListTests
+
+# fast build rule for target.
+DoublyLinkedListTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoublyLinkedListTests.dir\build.make CMakeFiles/DoublyLinkedListTests.dir/build
+.PHONY : DoublyLinkedListTests/fast
+
+#=============================================================================
 # Target rules for targets named HashMapTests
 
 # Build rule for target.
@@ -234,6 +247,19 @@ HashMapTests: cmake_check_build_system
 HashMapTests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HashMapTests.dir\build.make CMakeFiles/HashMapTests.dir/build
 .PHONY : HashMapTests/fast
+
+#=============================================================================
+# Target rules for targets named RedisLiteTests
+
+# Build rule for target.
+RedisLiteTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 RedisLiteTests
+.PHONY : RedisLiteTests
+
+# fast build rule for target.
+RedisLiteTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLiteTests.dir\build.make CMakeFiles/RedisLiteTests.dir/build
+.PHONY : RedisLiteTests/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -479,6 +505,30 @@ src/customLibrery/redisLite.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CustomLibrary.dir\build.make CMakeFiles/CustomLibrary.dir/src/customLibrery/redisLite.cpp.s
 .PHONY : src/customLibrery/redisLite.cpp.s
 
+test/DoublyLinkedListTests.obj: test/DoublyLinkedListTests.cpp.obj
+.PHONY : test/DoublyLinkedListTests.obj
+
+# target to build an object file
+test/DoublyLinkedListTests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoublyLinkedListTests.dir\build.make CMakeFiles/DoublyLinkedListTests.dir/test/DoublyLinkedListTests.cpp.obj
+.PHONY : test/DoublyLinkedListTests.cpp.obj
+
+test/DoublyLinkedListTests.i: test/DoublyLinkedListTests.cpp.i
+.PHONY : test/DoublyLinkedListTests.i
+
+# target to preprocess a source file
+test/DoublyLinkedListTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoublyLinkedListTests.dir\build.make CMakeFiles/DoublyLinkedListTests.dir/test/DoublyLinkedListTests.cpp.i
+.PHONY : test/DoublyLinkedListTests.cpp.i
+
+test/DoublyLinkedListTests.s: test/DoublyLinkedListTests.cpp.s
+.PHONY : test/DoublyLinkedListTests.s
+
+# target to generate assembly for a file
+test/DoublyLinkedListTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoublyLinkedListTests.dir\build.make CMakeFiles/DoublyLinkedListTests.dir/test/DoublyLinkedListTests.cpp.s
+.PHONY : test/DoublyLinkedListTests.cpp.s
+
 test/DynamicArrayTests.obj: test/DynamicArrayTests.cpp.obj
 .PHONY : test/DynamicArrayTests.obj
 
@@ -551,6 +601,30 @@ test/LinkedListTests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LinkedListTests.dir\build.make CMakeFiles/LinkedListTests.dir/test/LinkedListTests.cpp.s
 .PHONY : test/LinkedListTests.cpp.s
 
+test/RedisLiteTests.obj: test/RedisLiteTests.cpp.obj
+.PHONY : test/RedisLiteTests.obj
+
+# target to build an object file
+test/RedisLiteTests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLiteTests.dir\build.make CMakeFiles/RedisLiteTests.dir/test/RedisLiteTests.cpp.obj
+.PHONY : test/RedisLiteTests.cpp.obj
+
+test/RedisLiteTests.i: test/RedisLiteTests.cpp.i
+.PHONY : test/RedisLiteTests.i
+
+# target to preprocess a source file
+test/RedisLiteTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLiteTests.dir\build.make CMakeFiles/RedisLiteTests.dir/test/RedisLiteTests.cpp.i
+.PHONY : test/RedisLiteTests.cpp.i
+
+test/RedisLiteTests.s: test/RedisLiteTests.cpp.s
+.PHONY : test/RedisLiteTests.s
+
+# target to generate assembly for a file
+test/RedisLiteTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLiteTests.dir\build.make CMakeFiles/RedisLiteTests.dir/test/RedisLiteTests.cpp.s
+.PHONY : test/RedisLiteTests.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -565,10 +639,12 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... CustomLibrary
+	@echo ... DoublyLinkedListTests
 	@echo ... DynamicArrayTests
 	@echo ... HashMapTests
 	@echo ... LinkedListTests
 	@echo ... RedisLite
+	@echo ... RedisLiteTests
 	@echo ... gmock
 	@echo ... gmock_main
 	@echo ... gtest
@@ -597,6 +673,9 @@ help:
 	@echo ... src/customLibrery/redisLite.obj
 	@echo ... src/customLibrery/redisLite.i
 	@echo ... src/customLibrery/redisLite.s
+	@echo ... test/DoublyLinkedListTests.obj
+	@echo ... test/DoublyLinkedListTests.i
+	@echo ... test/DoublyLinkedListTests.s
 	@echo ... test/DynamicArrayTests.obj
 	@echo ... test/DynamicArrayTests.i
 	@echo ... test/DynamicArrayTests.s
@@ -606,6 +685,9 @@ help:
 	@echo ... test/LinkedListTests.obj
 	@echo ... test/LinkedListTests.i
 	@echo ... test/LinkedListTests.s
+	@echo ... test/RedisLiteTests.obj
+	@echo ... test/RedisLiteTests.i
+	@echo ... test/RedisLiteTests.s
 .PHONY : help
 
 

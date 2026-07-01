@@ -2,7 +2,9 @@ D:/projects/RedisLite/build/CMakeFiles/CustomLibrary.dir
 D:/projects/RedisLite/build/CMakeFiles/RedisLite.dir
 D:/projects/RedisLite/build/CMakeFiles/DynamicArrayTests.dir
 D:/projects/RedisLite/build/CMakeFiles/LinkedListTests.dir
+D:/projects/RedisLite/build/CMakeFiles/DoublyLinkedListTests.dir
 D:/projects/RedisLite/build/CMakeFiles/HashMapTests.dir
+D:/projects/RedisLite/build/CMakeFiles/RedisLiteTests.dir
 D:/projects/RedisLite/build/CMakeFiles/test.dir
 D:/projects/RedisLite/build/CMakeFiles/edit_cache.dir
 D:/projects/RedisLite/build/CMakeFiles/rebuild_cache.dir

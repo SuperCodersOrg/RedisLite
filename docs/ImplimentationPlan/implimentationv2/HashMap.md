@@ -69,4 +69,187 @@ We chose a load factor threshold of 0.75. This means when the table is 75% full 
 
 **Generic implementation:** because it allows the same hashMap to store different data types without modifying the underlying code and also works for user-defined data types.
 
-# HashFunction Implimentation
+# HashFunction Implementation Plan
+# Section 1 — Public API
+- `generate(int key)`  Generates a hash value for an integer.
+
+- `generate(char key)`  Generates a hash value for a character.
+
+- `generate(bool key)`  Generates a hash value for a boolean value.
+
+- `generate(const std::string& key)`  Generates a hash value for a string using a polynomial rolling hash.
+
+- `generate(const T& key)`  Generates a hash value for any user-defined type.
+
+- `generateFallback(const T& key)`  Computes a hash by processing the raw bytes of an object when no custom `hashCode()` function is available.
+
+## Why this decomposition is better
+
+Different data types require different hashing strategies.
+
+Primitive data types such as `int`, `char`, and `bool` already represent small numeric values, so their hash values can be generated directly with almost no computation.
+
+Strings require a dedicated hashing algorithm because every character contributes to the final hash value.
+
+For user-defined classes, the implementation first checks at compile time whether the class provides a `hashCode()` member function using the `HasHashCode` helper structure.
+- If a `hashCode()` function exists, it is used because the class designer knows which members uniquely identify the object.
+- Otherwise, the implementation automatically falls back to a generic byte-wise hashing algorithm.
+This design provides both flexibility and ease of use while keeping the `HashFunction` completely generic.
+
+# Section 2 — Internal Representation
+It is implemented as a **stateless utility class** whose only responsibility is to convert different key types into integer hash values.
+The implementation consists of multiple overloaded `generate()` functions.
+## Primitive Types
+For primitive data types (`int`, `char`, and `bool`), the corresponding numeric value itself is returned as the hash value.
+### String Hashing
+For `std::string`, the implementation uses a **Polynomial Rolling Hash**.
+
+Starting with an initial hash value of zero, each character is processed using the formula:
+
+```text
+hash = hash * 31 + currentCharacter
+```
+Multiplying by **31** before adding the next character ensures that both the character values and their positions influence the final hash, resulting in a much better distribution than simply summing the ASCII values.
+## User-Defined Types
+For generic user-defined types, the implementation relies on the helper template `HasHashCode`.
+This template uses compile-time type inspection to determine whether the class defines a `hashCode()` member function.
+
+- If the class provides `hashCode()`, the returned value becomes the object's hash.
+- If no `hashCode()` function exists, `generateFallback()` is automatically invoked.
+
+### Fallback Hashing
+
+The fallback algorithm converts the object's address into a sequence of bytes using
+
+```cpp
+reinterpret_cast<const unsigned char*>
+```
+
+and processes every byte using the same polynomial accumulation strategy.
+
+This allows the `HashMap` to support user-defined types even when no custom hashing function has been implemented.
+
+Since the class stores no dynamic memory, the compiler-generated constructor, copy constructor, assignment operator, and destructor are sufficient.
+
+---
+
+# Section 3 — Complexity Estimates
+
+## `generate(int)`, `generate(char)`, and `generate(bool)`
+
+| Case | Complexity |
+|------|------------|
+| Best | **O(1)** |
+| Worst | **O(1)** |
+| Average | **O(1)** |
+
+**Reason:**  
+Each function performs only a single constant-time operation and returns immediately.
+
+---
+
+## `generate(const std::string&)`
+
+| Case | Complexity |
+|------|------------|
+| Best | **O(1)** |
+| Worst | **O(N)** |
+| Average | **O(N)** |
+
+**Reason**
+
+- **Best Case:** An empty string requires no iteration.
+- **Worst Case:** Every character of the string must be processed exactly once.
+- **Average Case:** String hashing always depends on the length of the string.
+
+---
+
+## `generate(const T&)`
+
+| Case | Complexity |
+|------|------------|
+| Best | **O(1)** |
+| Worst | **O(sizeof(T))** |
+| Average | **O(1)** |
+
+**Reason**
+
+- **Best Case:** If the class provides a `hashCode()` function, the hash value is obtained by a single function call.
+- **Worst Case:** When `hashCode()` is unavailable, the fallback algorithm processes every byte of the object's memory.
+- **Average Case:** Most user-defined objects either implement `hashCode()` or are relatively small, making hash generation very fast.
+
+---
+
+## `generateFallback(const T&)`
+
+| Case | Complexity |
+|------|------------|
+| Best | **O(sizeof(T))** |
+| Worst | **O(sizeof(T))** |
+| Average | **O(sizeof(T))** |
+
+**Reason:**  
+The algorithm examines every byte of the object's memory exactly once.
+
+---
+
+# Section 4 — Design Decisions
+
+## overload `generate()` for primitive types
+
+Primitive types already represent numeric values.
+
+Returning those values directly avoids unnecessary computations and produces constant-time hash generation.
+
+---
+
+## use Polynomial Rolling Hash for strings
+
+The polynomial rolling technique
+
+```text
+hash = hash * 31 + currentCharacter
+```
+produces a much better distribution than simply adding character values together.
+The multiplication ensures that both the characters and their positions influence the final hash value, significantly reducing collisions for similar strings.
+
+---
+
+## detect `hashCode()` at compile time
+
+The helper template `HasHashCode` uses  (Substitution Failure Is Not An Error)** to determine whether a user-defined class implements a `hashCode()` member function.
+
+- If `hashCode()` exists, the compiler automatically selects that implementation.
+- If it does not exist, the compiler silently switches to `generateFallback()` without producing a compilation error.
+
+This allows the `HashFunction` to support both kinds of user-defined classes while requiring no additional work from the `HashMap` implementation.
+
+---
+
+## Why provide `generateFallback()`?
+
+Not every user-defined class will implement its own hashing function.
+
+Rejecting such classes would reduce the generic nature of the `HashMap`.
+
+Instead, the fallback algorithm hashes the raw bytes of the object so that any trivially copyable user-defined type can still be used as a key.
+
+---
+
+## Why use `reinterpret_cast<const unsigned char*>`?
+
+Objects are stored in memory as a sequence of bytes.
+
+Converting the object to an `unsigned char*` allows the algorithm to examine each byte individually without modifying the original object.
+
+Using `unsigned char` guarantees that every byte is treated as an unsigned value between **0 and 255**, ensuring consistent hash computation across different platforms.
+
+
+## Generic Implementation
+The `HashFunction` is implemented using:
+
+- Function overloading
+- Templates
+- Compile-time type inspection (SFINAE)
+This enables the same hashing interface to support primitive types, strings, and user-defined classes without requiring changes to the `HashMap` implementation.
+The result is a reusable, extensible, and fully generic hashing mechanism suitable for a generic data structure library.

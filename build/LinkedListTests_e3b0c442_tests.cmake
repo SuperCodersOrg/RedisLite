@@ -1,113 +1,86 @@
-add_test([=[LL_AppendInt.AppendToEmptyList]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendInt.AppendToEmptyList]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendInt.AppendToEmptyList]=]
+add_test([=[Append.EmptyThenOne]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Append.EmptyThenOne]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Append.EmptyThenOne]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:20]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:21]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_AppendInt.AppendSingleNegativeValue]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendInt.AppendSingleNegativeValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendInt.AppendSingleNegativeValue]=]
+add_test([=[Append.PreservesInsertionOrder]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Append.PreservesInsertionOrder]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Append.PreservesInsertionOrder]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:27]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:30]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_AppendInt.AppendPreservesOrder]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendInt.AppendPreservesOrder]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendInt.AppendPreservesOrder]=]
+add_test([=[Append.FalsyValues]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Append.FalsyValues]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Append.FalsyValues]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:34]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:39]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_AppendInt.AppendMultipleElements]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendInt.AppendMultipleElements]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendInt.AppendMultipleElements]=]
+add_test([=[Append.CrossTypeDoubleAndStruct]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Append.CrossTypeDoubleAndStruct]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Append.CrossTypeDoubleAndStruct]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:44]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:52]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_AppendInt.AppendLargeDataset]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendInt.AppendLargeDataset]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendInt.AppendLargeDataset]=]
+add_test([=[Append.StructDataSurvivesDestroy]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Append.StructDataSurvivesDestroy]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Append.StructDataSurvivesDestroy]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:51]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:68]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_AppendDouble.AppendDoubleValues]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendDouble.AppendDoubleValues]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendDouble.AppendDoubleValues]=]
+add_test([=[Append.LargeDataset]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Append.LargeDataset]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Append.LargeDataset]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:60]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:81]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_AppendDouble.AppendNegativeDoubles]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendDouble.AppendNegativeDoubles]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendDouble.AppendNegativeDoubles]=]
+add_test([=[Get.BoundaryIndices]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Get.BoundaryIndices]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Get.BoundaryIndices]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:70]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:97]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_AppendString.AppendStringValues]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendString.AppendStringValues]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendString.AppendStringValues]=]
+add_test([=[Get.OutOfBoundsThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Get.OutOfBoundsThrows]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Get.OutOfBoundsThrows]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:78]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:105]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_AppendString.AppendEmptyString]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendString.AppendEmptyString]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendString.AppendEmptyString]=]
+add_test([=[Get.EmptyListThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Get.EmptyListThrows]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Get.EmptyListThrows]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:87]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:114]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_AppendString.AppendManyStrings]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendString.AppendManyStrings]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendString.AppendManyStrings]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:95]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_AppendStruct.AppendCustomStruct]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendStruct.AppendCustomStruct]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendStruct.AppendCustomStruct]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:102]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_AppendStruct.AppendStructPreservesOrder]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_AppendStruct.AppendStructPreservesOrder]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_AppendStruct.AppendStructPreservesOrder]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:111]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_GetInt.GetValidFirstIndex]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetInt.GetValidFirstIndex]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetInt.GetValidFirstIndex]=]
+add_test([=[Get.MutableReferenceWorks]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Get.MutableReferenceWorks]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Get.MutableReferenceWorks]=]
   PROPERTIES
     
     DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:124]==]
@@ -115,80 +88,44 @@ set_tests_properties([=[LL_GetInt.GetValidFirstIndex]=]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_GetInt.GetValidLastIndex]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetInt.GetValidLastIndex]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetInt.GetValidLastIndex]=]
+add_test([=[Get.ConstOverload]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Get.ConstOverload]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Get.ConstOverload]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:130]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:137]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_GetInt.GetValidMiddleIndex]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetInt.GetValidMiddleIndex]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetInt.GetValidMiddleIndex]=]
+add_test([=[Get.CrossTypeDoubleAndStruct]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Get.CrossTypeDoubleAndStruct]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Get.CrossTypeDoubleAndStruct]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:136]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:146]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_GetInt.GetNegativeIndexThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetInt.GetNegativeIndexThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetInt.GetNegativeIndexThrows]=]
+add_test([=[Insert.IntoEmptyAtZero]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Insert.IntoEmptyAtZero]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Insert.IntoEmptyAtZero]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:142]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:164]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_GetInt.GetOutOfBoundsThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetInt.GetOutOfBoundsThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetInt.GetOutOfBoundsThrows]=]
+add_test([=[Insert.AtBeginningChangesHead]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Insert.AtBeginningChangesHead]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Insert.AtBeginningChangesHead]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:148]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:172]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_GetInt.GetOnEmptyListThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetInt.GetOnEmptyListThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetInt.GetOnEmptyListThrows]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:155]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_GetInt.GetReturnsByValue]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetInt.GetReturnsByValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetInt.GetReturnsByValue]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:161]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_GetInt.GetOnConstList]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetInt.GetOnConstList]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetInt.GetOnConstList]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:170]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_GetDouble.GetDoubleValue]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetDouble.GetDoubleValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetDouble.GetDoubleValue]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:177]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_GetDouble.GetDoubleOutOfBoundsThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetDouble.GetDoubleOutOfBoundsThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetDouble.GetDoubleOutOfBoundsThrows]=]
+add_test([=[Insert.AtMiddleCorrectLinks]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Insert.AtMiddleCorrectLinks]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Insert.AtMiddleCorrectLinks]=]
   PROPERTIES
     
     DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:183]==]
@@ -196,71 +133,53 @@ set_tests_properties([=[LL_GetDouble.GetDoubleOutOfBoundsThrows]=]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_GetString.GetStringValue]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetString.GetStringValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetString.GetStringValue]=]
+add_test([=[Insert.AtEndEquivalentToAppend]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Insert.AtEndEquivalentToAppend]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Insert.AtEndEquivalentToAppend]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:189]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:193]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_GetString.GetStringEmptyListThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetString.GetStringEmptyListThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetString.GetStringEmptyListThrows]=]
+add_test([=[Insert.InvalidIndicesThrow]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Insert.InvalidIndicesThrow]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Insert.InvalidIndicesThrow]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:195]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:203]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_GetStruct.GetStructValue]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetStruct.GetStructValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetStruct.GetStructValue]=]
+add_test([=[Insert.StructAtBeginning]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Insert.StructAtBeginning]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Insert.StructAtBeginning]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:200]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:214]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_GetStruct.GetStructOutOfBoundsThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_GetStruct.GetStructOutOfBoundsThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_GetStruct.GetStructOutOfBoundsThrows]=]
+add_test([=[Remove.OnlyElement]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Remove.OnlyElement]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.OnlyElement]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:206]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:229]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_InsertInt.InsertIntoEmptyList]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertInt.InsertIntoEmptyList]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertInt.InsertIntoEmptyList]=]
+add_test([=[Remove.HeadChange]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Remove.HeadChange]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.HeadChange]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:219]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:238]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_InsertInt.InsertAtBeginning]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertInt.InsertAtBeginning]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertInt.InsertAtBeginning]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:226]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_InsertInt.InsertAtMiddle]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertInt.InsertAtMiddle]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertInt.InsertAtMiddle]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:236]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_InsertInt.InsertAtEnd]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertInt.InsertAtEnd]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertInt.InsertAtEnd]=]
+add_test([=[Remove.MiddleClosesGap]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Remove.MiddleClosesGap]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.MiddleClosesGap]=]
   PROPERTIES
     
     DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:247]==]
@@ -268,44 +187,26 @@ set_tests_properties([=[LL_InsertInt.InsertAtEnd]=]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_InsertInt.InsertNegativeIndexThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertInt.InsertNegativeIndexThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertInt.InsertNegativeIndexThrows]=]
+add_test([=[Remove.StructDataIntactAfterRemove]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Remove.StructDataIntactAfterRemove]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.StructDataIntactAfterRemove]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:256]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:259]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_InsertInt.InsertPastEndThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertInt.InsertPastEndThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertInt.InsertPastEndThrows]=]
+add_test([=[Remove.InvalidIndicesThrow]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Remove.InvalidIndicesThrow]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.InvalidIndicesThrow]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:262]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:271]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_InsertInt.InsertIntoEmptyAtIndex1Throws]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertInt.InsertIntoEmptyAtIndex1Throws]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertInt.InsertIntoEmptyAtIndex1Throws]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:268]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_InsertInt.InsertLargeDataset]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertInt.InsertLargeDataset]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertInt.InsertLargeDataset]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:273]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_InsertDouble.InsertDoubleAtMiddle]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertDouble.InsertDoubleAtMiddle]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertDouble.InsertDoubleAtMiddle]=]
+add_test([=[Remove.CrossTypeStringAndStruct]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=Remove.CrossTypeStringAndStruct]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.CrossTypeStringAndStruct]=]
   PROPERTIES
     
     DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:283]==]
@@ -313,17 +214,8 @@ set_tests_properties([=[LL_InsertDouble.InsertDoubleAtMiddle]=]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_InsertString.InsertStringAtBeginning]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertString.InsertStringAtBeginning]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertString.InsertStringAtBeginning]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:293]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_InsertString.InsertStringAtEnd]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertString.InsertStringAtEnd]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertString.InsertStringAtEnd]=]
+add_test([=[GetSize.InitialSizeIsZero]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSize.InitialSizeIsZero]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[GetSize.InitialSizeIsZero]=]
   PROPERTIES
     
     DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:303]==]
@@ -331,125 +223,98 @@ set_tests_properties([=[LL_InsertString.InsertStringAtEnd]=]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_InsertStruct.InsertStructAtBeginning]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_InsertStruct.InsertStructAtBeginning]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_InsertStruct.InsertStructAtBeginning]=]
+add_test([=[GetSize.TracksAppends]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSize.TracksAppends]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[GetSize.TracksAppends]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:310]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:309]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveInt.RemoveOnlyElement]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveInt.RemoveOnlyElement]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveInt.RemoveOnlyElement]=]
+add_test([=[GetSize.TracksRemoves]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSize.TracksRemoves]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[GetSize.TracksRemoves]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:326]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:318]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveInt.RemoveFromBeginning]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveInt.RemoveFromBeginning]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveInt.RemoveFromBeginning]=]
+add_test([=[GetSize.TracksInserts]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSize.TracksInserts]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[GetSize.TracksInserts]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:333]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:328]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveInt.RemoveFromMiddle]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveInt.RemoveFromMiddle]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveInt.RemoveFromMiddle]=]
+add_test([=[GetSize.MixedOperations]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSize.MixedOperations]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[GetSize.MixedOperations]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:341]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:336]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveInt.RemoveFromEnd]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveInt.RemoveFromEnd]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveInt.RemoveFromEnd]=]
+add_test([=[GetSize.CalledOnConstRef]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSize.CalledOnConstRef]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[GetSize.CalledOnConstRef]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:349]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:345]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveInt.RemoveUntilEmpty]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveInt.RemoveUntilEmpty]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveInt.RemoveUntilEmpty]=]
+add_test([=[CopyConstructor.DeepCopyValues]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyConstructor.DeepCopyValues]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CopyConstructor.DeepCopyValues]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:357]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:359]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveInt.RemoveNegativeIndexThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveInt.RemoveNegativeIndexThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveInt.RemoveNegativeIndexThrows]=]
+add_test([=[CopyConstructor.CopyIsIndependent]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyConstructor.CopyIsIndependent]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CopyConstructor.CopyIsIndependent]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:366]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:369]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveInt.RemoveOutOfBoundsThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveInt.RemoveOutOfBoundsThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveInt.RemoveOutOfBoundsThrows]=]
+add_test([=[CopyConstructor.CopyEmptyList]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyConstructor.CopyEmptyList]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CopyConstructor.CopyEmptyList]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:372]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:380]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveInt.RemoveOnEmptyListThrows]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveInt.RemoveOnEmptyListThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveInt.RemoveOnEmptyListThrows]=]
+add_test([=[CopyConstructor.CrossTypeStringAndStruct]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyConstructor.CrossTypeStringAndStruct]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CopyConstructor.CrossTypeStringAndStruct]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:379]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:388]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveInt.RemoveLargeDataset]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveInt.RemoveLargeDataset]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveInt.RemoveLargeDataset]=]
+add_test([=[CopyConstructor.AssignmentOperatorMissing]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyConstructor.AssignmentOperatorMissing]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CopyConstructor.AssignmentOperatorMissing]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:384]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:405]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveDouble.RemoveDoubleFromMiddle]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveDouble.RemoveDoubleFromMiddle]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveDouble.RemoveDoubleFromMiddle]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:393]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_RemoveString.RemoveStringFromBeginning]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveString.RemoveStringFromBeginning]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveString.RemoveStringFromBeginning]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:404]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_RemoveString.RemoveStringFromEnd]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveString.RemoveStringFromEnd]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveString.RemoveStringFromEnd]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:413]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[LL_RemoveStruct.RemoveStructOnlyElement]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveStruct.RemoveStructOnlyElement]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveStruct.RemoveStructOnlyElement]=]
+add_test([=[CopyConstructor.CopyAndOriginalDestructSafely]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyConstructor.CopyAndOriginalDestructSafely]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CopyConstructor.CopyAndOriginalDestructSafely]=]
   PROPERTIES
     
     DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:422]==]
@@ -457,103 +322,4 @@ set_tests_properties([=[LL_RemoveStruct.RemoveStructOnlyElement]=]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[LL_RemoveStruct.RemoveStructFromMiddle]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=LL_RemoveStruct.RemoveStructFromMiddle]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[LL_RemoveStruct.RemoveStructFromMiddle]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:429]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[GetSizeLL.SizeOfFreshList]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSizeLL.SizeOfFreshList]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetSizeLL.SizeOfFreshList]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:445]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[GetSizeLL.SizeAfterAppends]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSizeLL.SizeAfterAppends]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetSizeLL.SizeAfterAppends]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:450]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[GetSizeLL.SizeAfterRemove]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSizeLL.SizeAfterRemove]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetSizeLL.SizeAfterRemove]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:456]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[GetSizeLL.SizeAfterInsert]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSizeLL.SizeAfterInsert]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetSizeLL.SizeAfterInsert]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:464]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[GetSizeLL.SizeAfterMixedOperations]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=GetSizeLL.SizeAfterMixedOperations]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetSizeLL.SizeAfterMixedOperations]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:471]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[CopyLL_Int.CopyConstructorDeepCopy]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyLL_Int.CopyConstructorDeepCopy]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CopyLL_Int.CopyConstructorDeepCopy]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:486]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[CopyLL_Int.CopyIsIndependent]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyLL_Int.CopyIsIndependent]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CopyLL_Int.CopyIsIndependent]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:496]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[CopyLL_Int.CopyEmptyList]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyLL_Int.CopyEmptyList]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CopyLL_Int.CopyEmptyList]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:506]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[CopyLL_String.CopyConstructorStrings]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyLL_String.CopyConstructorStrings]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CopyLL_String.CopyConstructorStrings]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:512]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[CopyLL_Struct.CopyConstructorStruct]=]  D:/projects/RedisLite/build/LinkedListTests.exe [==[--gtest_filter=CopyLL_Struct.CopyConstructorStruct]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CopyLL_Struct.CopyConstructorStruct]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\LinkedListTests.cpp:522]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-set(LinkedListTests_TESTS [==[LL_AppendInt.AppendToEmptyList]==] [==[LL_AppendInt.AppendSingleNegativeValue]==] [==[LL_AppendInt.AppendPreservesOrder]==] [==[LL_AppendInt.AppendMultipleElements]==] [==[LL_AppendInt.AppendLargeDataset]==] [==[LL_AppendDouble.AppendDoubleValues]==] [==[LL_AppendDouble.AppendNegativeDoubles]==] [==[LL_AppendString.AppendStringValues]==] [==[LL_AppendString.AppendEmptyString]==] [==[LL_AppendString.AppendManyStrings]==] [==[LL_AppendStruct.AppendCustomStruct]==] [==[LL_AppendStruct.AppendStructPreservesOrder]==] [==[LL_GetInt.GetValidFirstIndex]==] [==[LL_GetInt.GetValidLastIndex]==] [==[LL_GetInt.GetValidMiddleIndex]==] [==[LL_GetInt.GetNegativeIndexThrows]==] [==[LL_GetInt.GetOutOfBoundsThrows]==] [==[LL_GetInt.GetOnEmptyListThrows]==] [==[LL_GetInt.GetReturnsByValue]==] [==[LL_GetInt.GetOnConstList]==] [==[LL_GetDouble.GetDoubleValue]==] [==[LL_GetDouble.GetDoubleOutOfBoundsThrows]==] [==[LL_GetString.GetStringValue]==] [==[LL_GetString.GetStringEmptyListThrows]==] [==[LL_GetStruct.GetStructValue]==] [==[LL_GetStruct.GetStructOutOfBoundsThrows]==] [==[LL_InsertInt.InsertIntoEmptyList]==] [==[LL_InsertInt.InsertAtBeginning]==] [==[LL_InsertInt.InsertAtMiddle]==] [==[LL_InsertInt.InsertAtEnd]==] [==[LL_InsertInt.InsertNegativeIndexThrows]==] [==[LL_InsertInt.InsertPastEndThrows]==] [==[LL_InsertInt.InsertIntoEmptyAtIndex1Throws]==] [==[LL_InsertInt.InsertLargeDataset]==] [==[LL_InsertDouble.InsertDoubleAtMiddle]==] [==[LL_InsertString.InsertStringAtBeginning]==] [==[LL_InsertString.InsertStringAtEnd]==] [==[LL_InsertStruct.InsertStructAtBeginning]==] [==[LL_RemoveInt.RemoveOnlyElement]==] [==[LL_RemoveInt.RemoveFromBeginning]==] [==[LL_RemoveInt.RemoveFromMiddle]==] [==[LL_RemoveInt.RemoveFromEnd]==] [==[LL_RemoveInt.RemoveUntilEmpty]==] [==[LL_RemoveInt.RemoveNegativeIndexThrows]==] [==[LL_RemoveInt.RemoveOutOfBoundsThrows]==] [==[LL_RemoveInt.RemoveOnEmptyListThrows]==] [==[LL_RemoveInt.RemoveLargeDataset]==] [==[LL_RemoveDouble.RemoveDoubleFromMiddle]==] [==[LL_RemoveString.RemoveStringFromBeginning]==] [==[LL_RemoveString.RemoveStringFromEnd]==] [==[LL_RemoveStruct.RemoveStructOnlyElement]==] [==[LL_RemoveStruct.RemoveStructFromMiddle]==] [==[GetSizeLL.SizeOfFreshList]==] [==[GetSizeLL.SizeAfterAppends]==] [==[GetSizeLL.SizeAfterRemove]==] [==[GetSizeLL.SizeAfterInsert]==] [==[GetSizeLL.SizeAfterMixedOperations]==] [==[CopyLL_Int.CopyConstructorDeepCopy]==] [==[CopyLL_Int.CopyIsIndependent]==] [==[CopyLL_Int.CopyEmptyList]==] [==[CopyLL_String.CopyConstructorStrings]==] [==[CopyLL_Struct.CopyConstructorStruct]==])
+set(LinkedListTests_TESTS [==[Append.EmptyThenOne]==] [==[Append.PreservesInsertionOrder]==] [==[Append.FalsyValues]==] [==[Append.CrossTypeDoubleAndStruct]==] [==[Append.StructDataSurvivesDestroy]==] [==[Append.LargeDataset]==] [==[Get.BoundaryIndices]==] [==[Get.OutOfBoundsThrows]==] [==[Get.EmptyListThrows]==] [==[Get.MutableReferenceWorks]==] [==[Get.ConstOverload]==] [==[Get.CrossTypeDoubleAndStruct]==] [==[Insert.IntoEmptyAtZero]==] [==[Insert.AtBeginningChangesHead]==] [==[Insert.AtMiddleCorrectLinks]==] [==[Insert.AtEndEquivalentToAppend]==] [==[Insert.InvalidIndicesThrow]==] [==[Insert.StructAtBeginning]==] [==[Remove.OnlyElement]==] [==[Remove.HeadChange]==] [==[Remove.MiddleClosesGap]==] [==[Remove.StructDataIntactAfterRemove]==] [==[Remove.InvalidIndicesThrow]==] [==[Remove.CrossTypeStringAndStruct]==] [==[GetSize.InitialSizeIsZero]==] [==[GetSize.TracksAppends]==] [==[GetSize.TracksRemoves]==] [==[GetSize.TracksInserts]==] [==[GetSize.MixedOperations]==] [==[GetSize.CalledOnConstRef]==] [==[CopyConstructor.DeepCopyValues]==] [==[CopyConstructor.CopyIsIndependent]==] [==[CopyConstructor.CopyEmptyList]==] [==[CopyConstructor.CrossTypeStringAndStruct]==] [==[CopyConstructor.AssignmentOperatorMissing]==] [==[CopyConstructor.CopyAndOriginalDestructSafely]==])

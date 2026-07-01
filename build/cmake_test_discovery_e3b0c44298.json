@@ -1,427 +1,402 @@
 {
-  "tests": 63,
+  "tests": 70,
   "name": "AllTests",
   "testsuites": [
     {
-      "name": "SetGet",
-      "tests": 10,
+      "name": "Set",
+      "tests": 12,
       "testsuite": [
         {
-          "name": "IntKeyIntValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 29
+          "name": "BasicInsertion",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 23
         },
         {
-          "name": "NegativeIntKey",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 35
+          "name": "OverwriteExistingKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 36
         },
         {
-          "name": "ZeroKey",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 41
+          "name": "EmptyKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 50
         },
         {
-          "name": "StringKeyStringValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 47
+          "name": "EmptyValue",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 62
         },
         {
-          "name": "StringKeyIntValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 53
+          "name": "NumericStrings",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 74
         },
         {
-          "name": "IntKeyDoubleValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 59
+          "name": "SpecialCharacters",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 86
         },
         {
-          "name": "IntKeyStructValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 65
+          "name": "KeyWithSpaces",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 98
         },
         {
-          "name": "StringKeyStructValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 71
+          "name": "LongKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 109
         },
         {
-          "name": "MultipleKeys",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 79
+          "name": "LongValue",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 122
         },
         {
-          "name": "EmptyStringKey",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 85
+          "name": "MultipleInsertions",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 135
+        },
+        {
+          "name": "MultipleOverwrites",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 155
+        },
+        {
+          "name": "ReinsertAfterDelete",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 170
         }
       ]
     },
     {
-      "name": "Overwrite",
-      "tests": 4,
+      "name": "Get",
+      "tests": 10,
       "testsuite": [
         {
-          "name": "IntKeyOverwriteValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 96
+          "name": "ExistingKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 199
         },
         {
-          "name": "StringKeyOverwriteValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 104
+          "name": "MissingKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 215
         },
         {
-          "name": "StructValueOverwrite",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 112
+          "name": "EmptyKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 225
         },
         {
-          "name": "OverwriteDoesNotGrowSize",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 120
+          "name": "EmptyValue",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 236
+        },
+        {
+          "name": "LongValue",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 247
+        },
+        {
+          "name": "AfterOverwrite",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 260
+        },
+        {
+          "name": "AfterDelete",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 272
+        },
+        {
+          "name": "AfterClear",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 286
+        },
+        {
+          "name": "StressRetrieval",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 304
+        },
+        {
+          "name": "ContinuousOverwrite",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 326
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "tests": 10,
+      "testsuite": [
+        {
+          "name": "ExistingKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 353
+        },
+        {
+          "name": "MissingKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 369
+        },
+        {
+          "name": "DeleteTwice",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 384
+        },
+        {
+          "name": "AfterOverwrite",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 399
+        },
+        {
+          "name": "EmptyKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 415
+        },
+        {
+          "name": "LongKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 429
+        },
+        {
+          "name": "MultipleKeys",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 444
+        },
+        {
+          "name": "ReinsertAfterDelete",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 464
+        },
+        {
+          "name": "SizeConsistency",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 481
+        },
+        {
+          "name": "DeleteAllReuse",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 506
         }
       ]
     },
     {
       "name": "Exist",
-      "tests": 6,
+      "tests": 10,
       "testsuite": [
         {
-          "name": "KeyPresent",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 133
+          "name": "ExistingKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 539
         },
         {
-          "name": "KeyAbsent",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 139
+          "name": "MissingKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 550
         },
         {
-          "name": "StringKeyPresent",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 144
+          "name": "EmptyKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 559
         },
         {
-          "name": "StringKeyAbsent",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 150
+          "name": "AfterDelete",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 570
         },
         {
-          "name": "AfterRemove",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 156
+          "name": "AfterClear",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 583
         },
         {
-          "name": "StillExistsAfterOverwrite",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 163
-        }
-      ]
-    },
-    {
-      "name": "Remove",
-      "tests": 5,
-      "testsuite": [
-        {
-          "name": "RemoveExistingIntKey",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 175
+          "name": "LongKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 598
         },
         {
-          "name": "RemoveExistingStringKey",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 183
+          "name": "NumericStringKey",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 611
         },
         {
-          "name": "RemoveDecreasesSize",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 190
+          "name": "SpecialCharacters",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 622
         },
         {
-          "name": "RemoveNonExistentKeyThrows",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 202
+          "name": "AfterMultipleOverwrites",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 635
         },
         {
-          "name": "RemoveOneOfManyKeysInSameBucket",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 207
-        }
-      ]
-    },
-    {
-      "name": "SizeAndEmpty",
-      "tests": 4,
-      "testsuite": [
-        {
-          "name": "StartsEmpty",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 222
-        },
-        {
-          "name": "NotEmptyAfterSet",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 228
-        },
-        {
-          "name": "SizeAfterMultipleSets",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 235
-        },
-        {
-          "name": "EmptyAfterClear",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 243
+          "name": "StressExist",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 652
         }
       ]
     },
     {
       "name": "Clear",
-      "tests": 3,
+      "tests": 5,
       "testsuite": [
         {
-          "name": "AllKeysGoneAfterClear",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 257
+          "name": "PopulatedDatabase",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 682
         },
         {
-          "name": "CanSetAfterClear",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 268
+          "name": "EmptyDatabase",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 702
         },
         {
-          "name": "ClearOnEmptyMap",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 277
+          "name": "ReuseAfterClear",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 714
+        },
+        {
+          "name": "MultipleClearCycles",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 733
+        },
+        {
+          "name": "StressClear",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 751
         }
       ]
     },
     {
-      "name": "Rehash",
-      "tests": 3,
+      "name": "Size",
+      "tests": 5,
       "testsuite": [
         {
-          "name": "DataIntactAfterRehash",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 288
+          "name": "InitiallyZero",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 781
         },
         {
-          "name": "StringKeysAfterRehash",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 299
+          "name": "AfterInsertion",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 790
         },
         {
-          "name": "StructValuesAfterRehash",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 313
+          "name": "OverwriteDoesNotIncreaseSize",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 805
+        },
+        {
+          "name": "AfterDelete",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 820
+        },
+        {
+          "name": "MixedOperations",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 841
         }
       ]
     },
     {
-      "name": "GetThrows",
-      "tests": 3,
+      "name": "Empty",
+      "tests": 5,
       "testsuite": [
         {
-          "name": "GetMissingIntKey",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 323
+          "name": "InitiallyTrue",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 877
         },
         {
-          "name": "GetMissingStringKey",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 328
+          "name": "AfterInsertion",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 886
         },
         {
-          "name": "GetAfterRemoveThrows",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 333
+          "name": "AfterDeleteAll",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 897
+        },
+        {
+          "name": "AfterClear",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 912
+        },
+        {
+          "name": "MixedOperations",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 930
         }
       ]
     },
     {
-      "name": "GetRef",
-      "tests": 4,
+      "name": "Integration",
+      "tests": 13,
       "testsuite": [
         {
-          "name": "MutateValueViaGetRef",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 344
+          "name": "CompleteWorkflow",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 966
         },
         {
-          "name": "MutateStructFieldViaGetRef",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 351
+          "name": "MixedOperations",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 994
         },
         {
-          "name": "RefRemainsValidAfterNonRehashSet",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 499
+          "name": "StressInsertion",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1030
         },
         {
-          "name": "RefReflectsMutation",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 508
-        }
-      ]
-    },
-    {
-      "name": "CopySemantics",
-      "tests": 4,
-      "testsuite": [
-        {
-          "name": "CopyConstructorCopiesAllKeys",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 362
+          "name": "StressOverwrite",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1057
         },
         {
-          "name": "CopyIsIndependent",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 373
+          "name": "StressDelete",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1081
         },
         {
-          "name": "AssignmentOperator",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 384
+          "name": "LongKeyLongValue",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1106
         },
         {
-          "name": "SelfAssignment",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 393
-        }
-      ]
-    },
-    {
-      "name": "CharKey",
-      "tests": 2,
-      "testsuite": [
-        {
-          "name": "CharKeyIntValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 405
+          "name": "ClearAndReuse",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1127
         },
         {
-          "name": "CharKeyStringValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 413
-        }
-      ]
-    },
-    {
-      "name": "BoolKey",
-      "tests": 1,
-      "testsuite": [
-        {
-          "name": "BoolKeyIntValue",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 421
-        }
-      ]
-    },
-    {
-      "name": "Collision",
-      "tests": 2,
-      "testsuite": [
-        {
-          "name": "MultipleKeysInSameBucket",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 433
+          "name": "MultipleClearCycles",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1159
         },
         {
-          "name": "RemoveFromCollidingBucket",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 445
-        }
-      ]
-    },
-    {
-      "name": "ConstAccess",
-      "tests": 4,
-      "testsuite": [
-        {
-          "name": "ConstRefCallsConstGet",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 461
+          "name": "DatabaseConsistency",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1183
         },
         {
-          "name": "ConstRefExistWorks",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 468
+          "name": "RepeatedInsertDelete",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1216
         },
         {
-          "name": "ConstRefGetMissingThrows",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 476
+          "name": "MissingKeyAfterStress",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1239
         },
         {
-          "name": "ConstRefGetSizeAndEmpty",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 483
-        }
-      ]
-    },
-    {
-      "name": "SizeDrift",
-      "tests": 3,
-      "testsuite": [
-        {
-          "name": "SizeAfterMixedOps",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 524
+          "name": "SpecialCharacterKeys",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1258
         },
         {
-          "name": "SizeAfterRemoveAndReinsertSameKey",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 547
-        },
-        {
-          "name": "SizeNeverGoesNegative",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 560
-        }
-      ]
-    },
-    {
-      "name": "MultipleClear",
-      "tests": 2,
-      "testsuite": [
-        {
-          "name": "TwoClearCycles",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 574
-        },
-        {
-          "name": "DataAfterThreeCycles",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 589
-        }
-      ]
-    },
-    {
-      "name": "RemoveAllRefill",
-      "tests": 1,
-      "testsuite": [
-        {
-          "name": "RemoveAllThenRefill",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 607
-        }
-      ]
-    },
-    {
-      "name": "GhostEntry",
-      "tests": 2,
-      "testsuite": [
-        {
-          "name": "OverwriteThenRemoveLeavesSizeZero",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 633
-        },
-        {
-          "name": "OverwriteNoDuplicateInChain",
-          "file": "D:\\projects\\RedisLite\\test\\HashMapTests.cpp",
-          "line": 643
+          "name": "MassiveMixedWorkload",
+          "file": "D:\\projects\\RedisLite\\test\\RedisLiteTests.cpp",
+          "line": 1281
         }
       ]
     }

@@ -2,40 +2,22 @@ add_test([=[SetGet.IntKeyIntValue]=]  D:/projects/RedisLite/build/HashMapTests.e
 set_tests_properties([=[SetGet.IntKeyIntValue]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:29]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:37]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[SetGet.NegativeIntKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.NegativeIntKey]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SetGet.NegativeIntKey]=]
+add_test([=[SetGet.NegativeKeyAndZeroKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.NegativeKeyAndZeroKey]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SetGet.NegativeKeyAndZeroKey]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:35]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:44]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[SetGet.ZeroKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.ZeroKey]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SetGet.ZeroKey]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:41]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[SetGet.StringKeyStringValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.StringKeyStringValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SetGet.StringKeyStringValue]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:47]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[SetGet.StringKeyIntValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.StringKeyIntValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SetGet.StringKeyIntValue]=]
+add_test([=[SetGet.StringKeyVariousValues]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.StringKeyVariousValues]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SetGet.StringKeyVariousValues]=]
   PROPERTIES
     
     DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:53]==]
@@ -43,17 +25,8 @@ set_tests_properties([=[SetGet.StringKeyIntValue]=]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[SetGet.IntKeyDoubleValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.IntKeyDoubleValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SetGet.IntKeyDoubleValue]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:59]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[SetGet.IntKeyStructValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.IntKeyStructValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SetGet.IntKeyStructValue]=]
+add_test([=[SetGet.StructValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.StructValue]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SetGet.StructValue]=]
   PROPERTIES
     
     DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:65]==]
@@ -61,227 +34,155 @@ set_tests_properties([=[SetGet.IntKeyStructValue]=]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[SetGet.StringKeyStructValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.StringKeyStructValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SetGet.StringKeyStructValue]=]
+add_test([=[SetGet.MutableReferenceReturn]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.MutableReferenceReturn]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SetGet.MutableReferenceReturn]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:71]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:74]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[SetGet.MultipleKeys]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.MultipleKeys]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SetGet.MultipleKeys]=]
+add_test([=[SetGet.ObjectAsKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.ObjectAsKey]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SetGet.ObjectAsKey]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:79]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:89]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[SetGet.EmptyStringKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SetGet.EmptyStringKey]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SetGet.EmptyStringKey]=]
+add_test([=[Overwrite.ValueUpdatedSizeStable]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Overwrite.ValueUpdatedSizeStable]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Overwrite.ValueUpdatedSizeStable]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:85]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:106]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Overwrite.IntKeyOverwriteValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Overwrite.IntKeyOverwriteValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Overwrite.IntKeyOverwriteValue]=]
+add_test([=[Overwrite.StringKeyOverwrite]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Overwrite.StringKeyOverwrite]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Overwrite.StringKeyOverwrite]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:96]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:115]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Overwrite.StringKeyOverwriteValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Overwrite.StringKeyOverwriteValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Overwrite.StringKeyOverwriteValue]=]
+add_test([=[Overwrite.ChainedOverwrites]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Overwrite.ChainedOverwrites]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Overwrite.ChainedOverwrites]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:104]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:124]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Overwrite.StructValueOverwrite]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Overwrite.StructValueOverwrite]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Overwrite.StructValueOverwrite]=]
+add_test([=[Overwrite.OverwriteThenRemoveLeavesMapEmpty]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Overwrite.OverwriteThenRemoveLeavesMapEmpty]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Overwrite.OverwriteThenRemoveLeavesMapEmpty]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:112]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:134]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Overwrite.OverwriteDoesNotGrowSize]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Overwrite.OverwriteDoesNotGrowSize]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Overwrite.OverwriteDoesNotGrowSize]=]
+add_test([=[Overwrite.ObjectKeyOverwrite]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Overwrite.ObjectKeyOverwrite]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Overwrite.ObjectKeyOverwrite]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:120]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:146]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Exist.KeyPresent]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.KeyPresent]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Exist.KeyPresent]=]
+add_test([=[Remove.ExistingKeyRemoved]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Remove.ExistingKeyRemoved]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.ExistingKeyRemoved]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:133]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:161]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Exist.KeyAbsent]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.KeyAbsent]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Exist.KeyAbsent]=]
+add_test([=[Remove.MissingKeyThrows]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Remove.MissingKeyThrows]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.MissingKeyThrows]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:139]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:171]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Exist.StringKeyPresent]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.StringKeyPresent]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Exist.StringKeyPresent]=]
+add_test([=[Remove.CollisionChainIntegrity]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Remove.CollisionChainIntegrity]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.CollisionChainIntegrity]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:144]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:181]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Exist.StringKeyAbsent]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.StringKeyAbsent]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Exist.StringKeyAbsent]=]
+add_test([=[Remove.DrainThenRefill]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Remove.DrainThenRefill]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.DrainThenRefill]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:150]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:191]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Exist.AfterRemove]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.AfterRemove]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Exist.AfterRemove]=]
+add_test([=[Remove.ObjectKeyRemove]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Remove.ObjectKeyRemove]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Remove.ObjectKeyRemove]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:156]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:203]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Exist.StillExistsAfterOverwrite]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.StillExistsAfterOverwrite]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Exist.StillExistsAfterOverwrite]=]
+add_test([=[Exist.PresentAndAbsent]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.PresentAndAbsent]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Exist.PresentAndAbsent]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:163]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:220]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Remove.RemoveExistingIntKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Remove.RemoveExistingIntKey]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Remove.RemoveExistingIntKey]=]
+add_test([=[Exist.AfterRemoveAndAfterClear]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.AfterRemoveAndAfterClear]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Exist.AfterRemoveAndAfterClear]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:175]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:229]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Remove.RemoveExistingStringKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Remove.RemoveExistingStringKey]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Remove.RemoveExistingStringKey]=]
+add_test([=[Exist.ConstRefExistAndGet]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.ConstRefExistAndGet]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Exist.ConstRefExistAndGet]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:183]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:242]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Remove.RemoveDecreasesSize]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Remove.RemoveDecreasesSize]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Remove.RemoveDecreasesSize]=]
+add_test([=[Exist.BoolKeyBothValues]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.BoolKeyBothValues]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Exist.BoolKeyBothValues]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:190]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:255]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Remove.RemoveNonExistentKeyThrows]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Remove.RemoveNonExistentKeyThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Remove.RemoveNonExistentKeyThrows]=]
+add_test([=[Exist.ObjectKeyExist]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Exist.ObjectKeyExist]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Exist.ObjectKeyExist]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:202]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[Remove.RemoveOneOfManyKeysInSameBucket]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Remove.RemoveOneOfManyKeysInSameBucket]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Remove.RemoveOneOfManyKeysInSameBucket]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:207]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[SizeAndEmpty.StartsEmpty]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeAndEmpty.StartsEmpty]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SizeAndEmpty.StartsEmpty]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:222]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[SizeAndEmpty.NotEmptyAfterSet]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeAndEmpty.NotEmptyAfterSet]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SizeAndEmpty.NotEmptyAfterSet]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:228]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[SizeAndEmpty.SizeAfterMultipleSets]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeAndEmpty.SizeAfterMultipleSets]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SizeAndEmpty.SizeAfterMultipleSets]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:235]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[SizeAndEmpty.EmptyAfterClear]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeAndEmpty.EmptyAfterClear]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SizeAndEmpty.EmptyAfterClear]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:243]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[Clear.AllKeysGoneAfterClear]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Clear.AllKeysGoneAfterClear]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Clear.AllKeysGoneAfterClear]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:257]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[Clear.CanSetAfterClear]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Clear.CanSetAfterClear]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Clear.CanSetAfterClear]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:268]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[Clear.ClearOnEmptyMap]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Clear.ClearOnEmptyMap]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Clear.ClearOnEmptyMap]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:277]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:267]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
@@ -290,7 +191,7 @@ add_test([=[Rehash.DataIntactAfterRehash]=]  D:/projects/RedisLite/build/HashMap
 set_tests_properties([=[Rehash.DataIntactAfterRehash]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:288]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:284]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
@@ -299,7 +200,7 @@ add_test([=[Rehash.StringKeysAfterRehash]=]  D:/projects/RedisLite/build/HashMap
 set_tests_properties([=[Rehash.StringKeysAfterRehash]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:299]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:295]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
@@ -308,130 +209,85 @@ add_test([=[Rehash.StructValuesAfterRehash]=]  D:/projects/RedisLite/build/HashM
 set_tests_properties([=[Rehash.StructValuesAfterRehash]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:313]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:308]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[GetThrows.GetMissingIntKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=GetThrows.GetMissingIntKey]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetThrows.GetMissingIntKey]=]
+add_test([=[Rehash.ObjectKeyAfterRehash]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Rehash.ObjectKeyAfterRehash]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Rehash.ObjectKeyAfterRehash]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:323]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:316]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[GetThrows.GetMissingStringKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=GetThrows.GetMissingStringKey]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetThrows.GetMissingStringKey]=]
+add_test([=[Rehash.RefInvalidatedAfterRehash]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Rehash.RefInvalidatedAfterRehash]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Rehash.RefInvalidatedAfterRehash]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:328]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:329]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[GetThrows.GetAfterRemoveThrows]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=GetThrows.GetAfterRemoveThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetThrows.GetAfterRemoveThrows]=]
+add_test([=[Clear.AllKeysGone]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Clear.AllKeysGone]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Clear.AllKeysGone]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:333]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:348]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[GetRef.MutateValueViaGetRef]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=GetRef.MutateValueViaGetRef]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetRef.MutateValueViaGetRef]=]
+add_test([=[Clear.ClearOnEmptyMap]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Clear.ClearOnEmptyMap]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Clear.ClearOnEmptyMap]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:344]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:360]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[GetRef.MutateStructFieldViaGetRef]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=GetRef.MutateStructFieldViaGetRef]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetRef.MutateStructFieldViaGetRef]=]
+add_test([=[Clear.ReuseAfterClear]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Clear.ReuseAfterClear]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Clear.ReuseAfterClear]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:351]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:367]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[GetRef.RefRemainsValidAfterNonRehashSet]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=GetRef.RefRemainsValidAfterNonRehashSet]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetRef.RefRemainsValidAfterNonRehashSet]=]
+add_test([=[Clear.MultipleClearCycles]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Clear.MultipleClearCycles]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Clear.MultipleClearCycles]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:499]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:380]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[GetRef.RefReflectsMutation]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=GetRef.RefReflectsMutation]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GetRef.RefReflectsMutation]=]
+add_test([=[Clear.ObjectKeyClear]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Clear.ObjectKeyClear]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Clear.ObjectKeyClear]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:508]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:392]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[CopySemantics.CopyConstructorCopiesAllKeys]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=CopySemantics.CopyConstructorCopiesAllKeys]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CopySemantics.CopyConstructorCopiesAllKeys]=]
+add_test([=[RuleOfThree.CopyConstructorIsDeep]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=RuleOfThree.CopyConstructorIsDeep]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuleOfThree.CopyConstructorIsDeep]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:362]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:409]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[CopySemantics.CopyIsIndependent]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=CopySemantics.CopyIsIndependent]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CopySemantics.CopyIsIndependent]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:373]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[CopySemantics.AssignmentOperator]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=CopySemantics.AssignmentOperator]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CopySemantics.AssignmentOperator]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:384]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[CopySemantics.SelfAssignment]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=CopySemantics.SelfAssignment]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CopySemantics.SelfAssignment]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:393]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[CharKey.CharKeyIntValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=CharKey.CharKeyIntValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CharKey.CharKeyIntValue]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:405]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[CharKey.CharKeyStringValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=CharKey.CharKeyStringValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[CharKey.CharKeyStringValue]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:413]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[BoolKey.BoolKeyIntValue]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=BoolKey.BoolKeyIntValue]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[BoolKey.BoolKeyIntValue]=]
+add_test([=[RuleOfThree.AssignmentIsDeep]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=RuleOfThree.AssignmentIsDeep]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuleOfThree.AssignmentIsDeep]=]
   PROPERTIES
     
     DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:421]==]
@@ -439,130 +295,76 @@ set_tests_properties([=[BoolKey.BoolKeyIntValue]=]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Collision.MultipleKeysInSameBucket]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Collision.MultipleKeysInSameBucket]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Collision.MultipleKeysInSameBucket]=]
+add_test([=[RuleOfThree.SelfAssignmentSafe]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=RuleOfThree.SelfAssignmentSafe]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuleOfThree.SelfAssignmentSafe]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:433]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:431]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[Collision.RemoveFromCollidingBucket]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=Collision.RemoveFromCollidingBucket]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[Collision.RemoveFromCollidingBucket]=]
+add_test([=[RuleOfThree.CopyEmptyMap]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=RuleOfThree.CopyEmptyMap]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuleOfThree.CopyEmptyMap]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:445]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:440]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[ConstAccess.ConstRefCallsConstGet]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=ConstAccess.ConstRefCallsConstGet]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[ConstAccess.ConstRefCallsConstGet]=]
+add_test([=[RuleOfThree.ObjectKeyCopy]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=RuleOfThree.ObjectKeyCopy]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[RuleOfThree.ObjectKeyCopy]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:461]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:448]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[ConstAccess.ConstRefExistWorks]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=ConstAccess.ConstRefExistWorks]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[ConstAccess.ConstRefExistWorks]=]
+add_test([=[SizeAndEmpty.TracksMixedOps]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeAndEmpty.TracksMixedOps]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SizeAndEmpty.TracksMixedOps]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:468]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:464]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[ConstAccess.ConstRefGetMissingThrows]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=ConstAccess.ConstRefGetMissingThrows]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[ConstAccess.ConstRefGetMissingThrows]=]
+add_test([=[SizeAndEmpty.RemoveAndReinsertSameKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeAndEmpty.RemoveAndReinsertSameKey]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SizeAndEmpty.RemoveAndReinsertSameKey]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:476]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:477]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[ConstAccess.ConstRefGetSizeAndEmpty]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=ConstAccess.ConstRefGetSizeAndEmpty]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[ConstAccess.ConstRefGetSizeAndEmpty]=]
+add_test([=[SizeAndEmpty.EmptyFlagAccurate]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeAndEmpty.EmptyFlagAccurate]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SizeAndEmpty.EmptyFlagAccurate]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:483]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:488]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[SizeDrift.SizeAfterMixedOps]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeDrift.SizeAfterMixedOps]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SizeDrift.SizeAfterMixedOps]=]
+add_test([=[SizeAndEmpty.ConstRefAccess]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeAndEmpty.ConstRefAccess]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SizeAndEmpty.ConstRefAccess]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:524]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:498]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[SizeDrift.SizeAfterRemoveAndReinsertSameKey]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeDrift.SizeAfterRemoveAndReinsertSameKey]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SizeDrift.SizeAfterRemoveAndReinsertSameKey]=]
+add_test([=[SizeAndEmpty.SizeNeverNegative]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeAndEmpty.SizeNeverNegative]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SizeAndEmpty.SizeNeverNegative]=]
   PROPERTIES
     
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:547]==]
+    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:507]==]
     WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
     SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
     
 )
-add_test([=[SizeDrift.SizeNeverGoesNegative]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=SizeDrift.SizeNeverGoesNegative]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SizeDrift.SizeNeverGoesNegative]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:560]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[MultipleClear.TwoClearCycles]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=MultipleClear.TwoClearCycles]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[MultipleClear.TwoClearCycles]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:574]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[MultipleClear.DataAfterThreeCycles]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=MultipleClear.DataAfterThreeCycles]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[MultipleClear.DataAfterThreeCycles]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:589]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[RemoveAllRefill.RemoveAllThenRefill]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=RemoveAllRefill.RemoveAllThenRefill]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[RemoveAllRefill.RemoveAllThenRefill]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:607]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[GhostEntry.OverwriteThenRemoveLeavesSizeZero]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=GhostEntry.OverwriteThenRemoveLeavesSizeZero]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GhostEntry.OverwriteThenRemoveLeavesSizeZero]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:633]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-add_test([=[GhostEntry.OverwriteNoDuplicateInChain]=]  D:/projects/RedisLite/build/HashMapTests.exe [==[--gtest_filter=GhostEntry.OverwriteNoDuplicateInChain]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[GhostEntry.OverwriteNoDuplicateInChain]=]
-  PROPERTIES
-    
-    DEF_SOURCE_LINE [==[D:\projects\RedisLite\test\HashMapTests.cpp:643]==]
-    WORKING_DIRECTORY [==[D:/projects/RedisLite/build]==]
-    SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==]
-    
-)
-set(HashMapTests_TESTS [==[SetGet.IntKeyIntValue]==] [==[SetGet.NegativeIntKey]==] [==[SetGet.ZeroKey]==] [==[SetGet.StringKeyStringValue]==] [==[SetGet.StringKeyIntValue]==] [==[SetGet.IntKeyDoubleValue]==] [==[SetGet.IntKeyStructValue]==] [==[SetGet.StringKeyStructValue]==] [==[SetGet.MultipleKeys]==] [==[SetGet.EmptyStringKey]==] [==[Overwrite.IntKeyOverwriteValue]==] [==[Overwrite.StringKeyOverwriteValue]==] [==[Overwrite.StructValueOverwrite]==] [==[Overwrite.OverwriteDoesNotGrowSize]==] [==[Exist.KeyPresent]==] [==[Exist.KeyAbsent]==] [==[Exist.StringKeyPresent]==] [==[Exist.StringKeyAbsent]==] [==[Exist.AfterRemove]==] [==[Exist.StillExistsAfterOverwrite]==] [==[Remove.RemoveExistingIntKey]==] [==[Remove.RemoveExistingStringKey]==] [==[Remove.RemoveDecreasesSize]==] [==[Remove.RemoveNonExistentKeyThrows]==] [==[Remove.RemoveOneOfManyKeysInSameBucket]==] [==[SizeAndEmpty.StartsEmpty]==] [==[SizeAndEmpty.NotEmptyAfterSet]==] [==[SizeAndEmpty.SizeAfterMultipleSets]==] [==[SizeAndEmpty.EmptyAfterClear]==] [==[Clear.AllKeysGoneAfterClear]==] [==[Clear.CanSetAfterClear]==] [==[Clear.ClearOnEmptyMap]==] [==[Rehash.DataIntactAfterRehash]==] [==[Rehash.StringKeysAfterRehash]==] [==[Rehash.StructValuesAfterRehash]==] [==[GetThrows.GetMissingIntKey]==] [==[GetThrows.GetMissingStringKey]==] [==[GetThrows.GetAfterRemoveThrows]==] [==[GetRef.MutateValueViaGetRef]==] [==[GetRef.MutateStructFieldViaGetRef]==] [==[GetRef.RefRemainsValidAfterNonRehashSet]==] [==[GetRef.RefReflectsMutation]==] [==[CopySemantics.CopyConstructorCopiesAllKeys]==] [==[CopySemantics.CopyIsIndependent]==] [==[CopySemantics.AssignmentOperator]==] [==[CopySemantics.SelfAssignment]==] [==[CharKey.CharKeyIntValue]==] [==[CharKey.CharKeyStringValue]==] [==[BoolKey.BoolKeyIntValue]==] [==[Collision.MultipleKeysInSameBucket]==] [==[Collision.RemoveFromCollidingBucket]==] [==[ConstAccess.ConstRefCallsConstGet]==] [==[ConstAccess.ConstRefExistWorks]==] [==[ConstAccess.ConstRefGetMissingThrows]==] [==[ConstAccess.ConstRefGetSizeAndEmpty]==] [==[SizeDrift.SizeAfterMixedOps]==] [==[SizeDrift.SizeAfterRemoveAndReinsertSameKey]==] [==[SizeDrift.SizeNeverGoesNegative]==] [==[MultipleClear.TwoClearCycles]==] [==[MultipleClear.DataAfterThreeCycles]==] [==[RemoveAllRefill.RemoveAllThenRefill]==] [==[GhostEntry.OverwriteThenRemoveLeavesSizeZero]==] [==[GhostEntry.OverwriteNoDuplicateInChain]==])
+set(HashMapTests_TESTS [==[SetGet.IntKeyIntValue]==] [==[SetGet.NegativeKeyAndZeroKey]==] [==[SetGet.StringKeyVariousValues]==] [==[SetGet.StructValue]==] [==[SetGet.MutableReferenceReturn]==] [==[SetGet.ObjectAsKey]==] [==[Overwrite.ValueUpdatedSizeStable]==] [==[Overwrite.StringKeyOverwrite]==] [==[Overwrite.ChainedOverwrites]==] [==[Overwrite.OverwriteThenRemoveLeavesMapEmpty]==] [==[Overwrite.ObjectKeyOverwrite]==] [==[Remove.ExistingKeyRemoved]==] [==[Remove.MissingKeyThrows]==] [==[Remove.CollisionChainIntegrity]==] [==[Remove.DrainThenRefill]==] [==[Remove.ObjectKeyRemove]==] [==[Exist.PresentAndAbsent]==] [==[Exist.AfterRemoveAndAfterClear]==] [==[Exist.ConstRefExistAndGet]==] [==[Exist.BoolKeyBothValues]==] [==[Exist.ObjectKeyExist]==] [==[Rehash.DataIntactAfterRehash]==] [==[Rehash.StringKeysAfterRehash]==] [==[Rehash.StructValuesAfterRehash]==] [==[Rehash.ObjectKeyAfterRehash]==] [==[Rehash.RefInvalidatedAfterRehash]==] [==[Clear.AllKeysGone]==] [==[Clear.ClearOnEmptyMap]==] [==[Clear.ReuseAfterClear]==] [==[Clear.MultipleClearCycles]==] [==[Clear.ObjectKeyClear]==] [==[RuleOfThree.CopyConstructorIsDeep]==] [==[RuleOfThree.AssignmentIsDeep]==] [==[RuleOfThree.SelfAssignmentSafe]==] [==[RuleOfThree.CopyEmptyMap]==] [==[RuleOfThree.ObjectKeyCopy]==] [==[SizeAndEmpty.TracksMixedOps]==] [==[SizeAndEmpty.RemoveAndReinsertSameKey]==] [==[SizeAndEmpty.EmptyFlagAccurate]==] [==[SizeAndEmpty.ConstRefAccess]==] [==[SizeAndEmpty.SizeNeverNegative]==])

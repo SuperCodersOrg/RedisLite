@@ -19,10 +19,8 @@ target_include_directories(CustomLibrary PUBLIC include)
 add_executable(RedisLite main.cpp)
 target_link_libraries(RedisLite CustomLibrary)
 
-# 1. Turn on testing in CMake
 enable_testing()
 
-# 2. Tell CMake to download Google Test directly from GitHub
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -32,27 +30,35 @@ FetchContent_Declare(
 # (Windows specific fix to prevent weird compiler conflicts)
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
-# 3. Download and make Google Test available to your project
+
 FetchContent_MakeAvailable(googletest)
 
-# 4. Create separate test executables for each data structure
+
 add_executable(DynamicArrayTests
     test/DynamicArrayTests.cpp
 )
 add_executable(LinkedListTests
     test/LinkedListTests.cpp
 )
+add_executable(DoublyLinkedListTests
+    test/DoublyLinkedListTests.cpp
+)
 add_executable(HashMapTests
     test/HashMapTests.cpp
 )
+add_executable(RedisLiteTests
+    test/RedisLiteTests.cpp
+)
 
-# 5. Link Google Test and CustomLibrary to each test executable
-target_link_libraries(DynamicArrayTests GTest::gtest_main CustomLibrary)
-target_link_libraries(LinkedListTests   GTest::gtest_main CustomLibrary)
-target_link_libraries(HashMapTests      GTest::gtest_main CustomLibrary)
+target_link_libraries(DynamicArrayTests     GTest::gtest_main CustomLibrary)
+target_link_libraries(LinkedListTests       GTest::gtest_main CustomLibrary)
+target_link_libraries(DoublyLinkedListTests GTest::gtest_main CustomLibrary)
+target_link_libraries(HashMapTests          GTest::gtest_main CustomLibrary)
+target_link_libraries(RedisLiteTests          GTest::gtest_main CustomLibrary)
 
-# 6. Allow CMake/CTest to discover all tests
 include(GoogleTest)
 gtest_discover_tests(DynamicArrayTests)
 gtest_discover_tests(LinkedListTests)
+gtest_discover_tests(DoublyLinkedListTests)
 gtest_discover_tests(HashMapTests)
+gtest_discover_tests(RedisLiteTests)

@@ -33,7 +33,9 @@ void HashMap<K, V>::rehash() {
         }
     }
 
-    buckets = newBuckets; 
+    // operator= on DynamicArray destroys the old buckets array
+    // and copies newBuckets — no explicit destructor calls needed.
+    buckets = newBuckets;
 }
 
 template<typename K, typename V>
@@ -97,7 +99,7 @@ V& HashMap<K, V>::get(K key) {
     DoublyLinkedList<Node<K, V>>& chain = buckets.get(idx);
     
     int chainSize = chain.getSize();
-    for (int i = 0; i < chainSize; i++) {
+    for (int i = 0; i < chainSize; i++){
         Node<K, V>& entry = chain.get(i);
         if (entry.key == key) {
             return entry.value;
@@ -161,7 +163,8 @@ bool HashMap<K, V>::exist(K key) const {
 template<typename K, typename V>
 void HashMap<K, V>::clear() {
     for (int i = 0; i < capacity; i++) {
-        buckets.get(i).~DoublyLinkedList();
+        // operator= on DoublyLinkedList already frees all nodes.
+        // Calling ~DoublyLinkedList() here first would double-free them.
         buckets.get(i) = DoublyLinkedList<Node<K, V>>();
     }
     size = 0;

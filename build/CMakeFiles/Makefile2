@@ -66,7 +66,9 @@ all: CMakeFiles/CustomLibrary.dir/all
 all: CMakeFiles/RedisLite.dir/all
 all: CMakeFiles/DynamicArrayTests.dir/all
 all: CMakeFiles/LinkedListTests.dir/all
+all: CMakeFiles/DoublyLinkedListTests.dir/all
 all: CMakeFiles/HashMapTests.dir/all
+all: CMakeFiles/RedisLiteTests.dir/all
 all: _deps/googletest-build/all
 .PHONY : all
 
@@ -75,7 +77,9 @@ codegen: CMakeFiles/CustomLibrary.dir/codegen
 codegen: CMakeFiles/RedisLite.dir/codegen
 codegen: CMakeFiles/DynamicArrayTests.dir/codegen
 codegen: CMakeFiles/LinkedListTests.dir/codegen
+codegen: CMakeFiles/DoublyLinkedListTests.dir/codegen
 codegen: CMakeFiles/HashMapTests.dir/codegen
+codegen: CMakeFiles/RedisLiteTests.dir/codegen
 codegen: _deps/googletest-build/codegen
 .PHONY : codegen
 
@@ -88,7 +92,9 @@ clean: CMakeFiles/CustomLibrary.dir/clean
 clean: CMakeFiles/RedisLite.dir/clean
 clean: CMakeFiles/DynamicArrayTests.dir/clean
 clean: CMakeFiles/LinkedListTests.dir/clean
+clean: CMakeFiles/DoublyLinkedListTests.dir/clean
 clean: CMakeFiles/HashMapTests.dir/clean
+clean: CMakeFiles/RedisLiteTests.dir/clean
 clean: _deps/googletest-build/clean
 .PHONY : clean
 
@@ -197,7 +203,7 @@ CMakeFiles/CustomLibrary.dir/clean:
 CMakeFiles/RedisLite.dir/all: CMakeFiles/CustomLibrary.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLite.dir\build.make CMakeFiles/RedisLite.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLite.dir\build.make CMakeFiles/RedisLite.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=15,16 "Built target RedisLite"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=17,18 "Built target RedisLite"
 .PHONY : CMakeFiles/RedisLite.dir/all
 
 # Build rule for subdir invocation for target.
@@ -214,7 +220,7 @@ RedisLite: CMakeFiles/RedisLite.dir/rule
 # codegen rule for target.
 CMakeFiles/RedisLite.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLite.dir\build.make CMakeFiles/RedisLite.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=15,16 "Finished codegen for target RedisLite"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=17,18 "Finished codegen for target RedisLite"
 .PHONY : CMakeFiles/RedisLite.dir/codegen
 
 # clean rule for target.
@@ -231,7 +237,7 @@ CMakeFiles/DynamicArrayTests.dir/all: _deps/googletest-build/googletest/CMakeFil
 CMakeFiles/DynamicArrayTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DynamicArrayTests.dir\build.make CMakeFiles/DynamicArrayTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DynamicArrayTests.dir\build.make CMakeFiles/DynamicArrayTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=9,10 "Built target DynamicArrayTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=11,12 "Built target DynamicArrayTests"
 .PHONY : CMakeFiles/DynamicArrayTests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -248,7 +254,7 @@ DynamicArrayTests: CMakeFiles/DynamicArrayTests.dir/rule
 # codegen rule for target.
 CMakeFiles/DynamicArrayTests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DynamicArrayTests.dir\build.make CMakeFiles/DynamicArrayTests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=9,10 "Finished codegen for target DynamicArrayTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=11,12 "Finished codegen for target DynamicArrayTests"
 .PHONY : CMakeFiles/DynamicArrayTests.dir/codegen
 
 # clean rule for target.
@@ -265,7 +271,7 @@ CMakeFiles/LinkedListTests.dir/all: _deps/googletest-build/googletest/CMakeFiles
 CMakeFiles/LinkedListTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LinkedListTests.dir\build.make CMakeFiles/LinkedListTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LinkedListTests.dir\build.make CMakeFiles/LinkedListTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=13,14 "Built target LinkedListTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=15,16 "Built target LinkedListTests"
 .PHONY : CMakeFiles/LinkedListTests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -282,13 +288,47 @@ LinkedListTests: CMakeFiles/LinkedListTests.dir/rule
 # codegen rule for target.
 CMakeFiles/LinkedListTests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LinkedListTests.dir\build.make CMakeFiles/LinkedListTests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=13,14 "Finished codegen for target LinkedListTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=15,16 "Finished codegen for target LinkedListTests"
 .PHONY : CMakeFiles/LinkedListTests.dir/codegen
 
 # clean rule for target.
 CMakeFiles/LinkedListTests.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LinkedListTests.dir\build.make CMakeFiles/LinkedListTests.dir/clean
 .PHONY : CMakeFiles/LinkedListTests.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/DoublyLinkedListTests.dir
+
+# All Build rule for target.
+CMakeFiles/DoublyLinkedListTests.dir/all: CMakeFiles/CustomLibrary.dir/all
+CMakeFiles/DoublyLinkedListTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/DoublyLinkedListTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoublyLinkedListTests.dir\build.make CMakeFiles/DoublyLinkedListTests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoublyLinkedListTests.dir\build.make CMakeFiles/DoublyLinkedListTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=9,10 "Built target DoublyLinkedListTests"
+.PHONY : CMakeFiles/DoublyLinkedListTests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/DoublyLinkedListTests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\RedisLite\build\CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/DoublyLinkedListTests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\RedisLite\build\CMakeFiles 0
+.PHONY : CMakeFiles/DoublyLinkedListTests.dir/rule
+
+# Convenience name for target.
+DoublyLinkedListTests: CMakeFiles/DoublyLinkedListTests.dir/rule
+.PHONY : DoublyLinkedListTests
+
+# codegen rule for target.
+CMakeFiles/DoublyLinkedListTests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoublyLinkedListTests.dir\build.make CMakeFiles/DoublyLinkedListTests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=9,10 "Finished codegen for target DoublyLinkedListTests"
+.PHONY : CMakeFiles/DoublyLinkedListTests.dir/codegen
+
+# clean rule for target.
+CMakeFiles/DoublyLinkedListTests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoublyLinkedListTests.dir\build.make CMakeFiles/DoublyLinkedListTests.dir/clean
+.PHONY : CMakeFiles/DoublyLinkedListTests.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/HashMapTests.dir
@@ -299,7 +339,7 @@ CMakeFiles/HashMapTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gt
 CMakeFiles/HashMapTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HashMapTests.dir\build.make CMakeFiles/HashMapTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HashMapTests.dir\build.make CMakeFiles/HashMapTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=11,12 "Built target HashMapTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=13,14 "Built target HashMapTests"
 .PHONY : CMakeFiles/HashMapTests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -316,7 +356,7 @@ HashMapTests: CMakeFiles/HashMapTests.dir/rule
 # codegen rule for target.
 CMakeFiles/HashMapTests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HashMapTests.dir\build.make CMakeFiles/HashMapTests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=11,12 "Finished codegen for target HashMapTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=13,14 "Finished codegen for target HashMapTests"
 .PHONY : CMakeFiles/HashMapTests.dir/codegen
 
 # clean rule for target.
@@ -325,13 +365,47 @@ CMakeFiles/HashMapTests.dir/clean:
 .PHONY : CMakeFiles/HashMapTests.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/RedisLiteTests.dir
+
+# All Build rule for target.
+CMakeFiles/RedisLiteTests.dir/all: CMakeFiles/CustomLibrary.dir/all
+CMakeFiles/RedisLiteTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/RedisLiteTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLiteTests.dir\build.make CMakeFiles/RedisLiteTests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLiteTests.dir\build.make CMakeFiles/RedisLiteTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=19,20 "Built target RedisLiteTests"
+.PHONY : CMakeFiles/RedisLiteTests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/RedisLiteTests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\RedisLite\build\CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/RedisLiteTests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\RedisLite\build\CMakeFiles 0
+.PHONY : CMakeFiles/RedisLiteTests.dir/rule
+
+# Convenience name for target.
+RedisLiteTests: CMakeFiles/RedisLiteTests.dir/rule
+.PHONY : RedisLiteTests
+
+# codegen rule for target.
+CMakeFiles/RedisLiteTests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLiteTests.dir\build.make CMakeFiles/RedisLiteTests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=19,20 "Finished codegen for target RedisLiteTests"
+.PHONY : CMakeFiles/RedisLiteTests.dir/codegen
+
+# clean rule for target.
+CMakeFiles/RedisLiteTests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RedisLiteTests.dir\build.make CMakeFiles/RedisLiteTests.dir/clean
+.PHONY : CMakeFiles/RedisLiteTests.dir/clean
+
+#=============================================================================
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
 
 # All Build rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=17,18 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=21,22 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -348,7 +422,7 @@ gmock: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=17,18 "Finished codegen for target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=21,22 "Finished codegen for target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen
 
 # clean rule for target.
@@ -364,7 +438,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=19,20 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=23,24 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -381,7 +455,7 @@ gmock_main: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=19,20 "Finished codegen for target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=23,24 "Finished codegen for target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
 
 # clean rule for target.
@@ -396,7 +470,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=21,22 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=25,26 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -413,7 +487,7 @@ gtest: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=21,22 "Finished codegen for target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=25,26 "Finished codegen for target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen
 
 # clean rule for target.
@@ -428,7 +502,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=23,24 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=27,28 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -445,7 +519,7 @@ gtest_main: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=23,24 "Finished codegen for target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\projects\RedisLite\build\CMakeFiles --progress-num=27,28 "Finished codegen for target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen
 
 # clean rule for target.

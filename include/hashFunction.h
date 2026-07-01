@@ -3,6 +3,16 @@
 #define HASH_FUNCTION_H
 
 #include <string>
+#include <type_traits>
+
+template<typename T>
+struct HasHashCode {
+    template<typename U>
+    static auto test(U* u) -> decltype(u->hashCode());
+    static auto test(...) -> void;
+    static constexpr bool value = std::is_same<decltype(test(std::declval<T*>())),
+                                                int>::value;
+};
 
 class HashFunction {
 public:

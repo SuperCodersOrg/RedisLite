@@ -23,20 +23,26 @@ inline int HashFunction::generate(const std::string& key) const {
     }
     return hash;
 }
-
 template<typename T>
 int HashFunction::generate(const T& key) const {
-    return static_cast<int>(key.hashCode());
-}   
+    if constexpr (HasHashCode<T>::value) {
+        return static_cast<int>(key.hashCode());
+    } else {
+        return generateFallback(key);
+    }
+}
 
 template<typename T>
 int HashFunction::generateFallback(const T& key) const {
-    const unsigned char* bytes = reinterpret_cast<const unsigned char*>(&key);
+    const unsigned char* bytes =
+        reinterpret_cast<const unsigned char*>(&key);
+
     int hash = 0;
-    for(size_t i = 0; i < sizeof(T); i++) {
+
+    for (size_t i = 0; i < sizeof(T); i++) {
         hash = hash * 31 + bytes[i];
     }
+
     return hash;
 }
-
 #endif // HASH_FUNCTION_CPP

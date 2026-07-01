@@ -1,0 +1,5 @@
+if(EXISTS "D:/projects/RedisLite/build/DoublyLinkedListTests_e3b0c442_tests.cmake")
+  include("D:/projects/RedisLite/build/DoublyLinkedListTests_e3b0c442_tests.cmake")
+else()
+  add_test(DoublyLinkedListTests_NOT_BUILT DoublyLinkedListTests_NOT_BUILT)
+endif()
