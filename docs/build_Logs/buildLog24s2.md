@@ -1,4 +1,4 @@
-# Date: June 25 
+# Date: June 24
 Duration: 60 minutes 
 
 Goal: 

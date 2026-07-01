@@ -14,13 +14,7 @@ hashMap.cpp:121:26: error: 'Entry' was not declared in this scope
 ## Section 2 — Failed Attempt
 When trying to bundle `linkedList.cpp` and `doublyLinkedList.cpp` into a single `SuperCodersCollections.h` master header, compilation failed massively due to a naming collision. Both linked list implementations independently used a struct named `Node`. My first thought was that putting them in separate files would keep them isolated. However, since C++ templates require implementations to be `#include`'d directly, the compiler pulled both `Node` definitions into the same global space, triggering a "redefinition of 'struct Node'" error. I had to explicitly rename them to `SNode` (Singly) and `DNode` (Doubly) so they could safely coexist.
 
-## Section 3 — Code Reference
-- **Commit Hash:** N/A (Pending Local Commit)
-- **Filenames & Lines:**
-  - `SuperCodersCollections.h` (Lines 1-9: Implementation of `#ifndef` header guards to prevent multiple inclusion errors).
-  - `hashMap.cpp` (Lines 34-57: `rehash()` logic doubling capacity and safely deep-copying old chains into new buckets).
-  - `hashMap.cpp` (Lines 91-116: The `set()` method utilizing O(1) array jumps and DoublyLinkedLists for collision resolution).
-
+## Section -3
 #### Implemented HashMap Functions
 - **`set(K key, V value)`**: Amortized O(1) insertion and updates. Hashes the key, finds the bucket, and resolves collisions by traversing or appending to the Doubly Linked List.
 - **`get(K key)`**: Amortized O(1) retrieval. Locates the bucket via hash and searches the chain for the corresponding key.

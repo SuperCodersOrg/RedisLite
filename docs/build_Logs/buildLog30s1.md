@@ -72,4 +72,4 @@ After the fix, re-ran `DynamicArrayTests.exe`:
 [  PASSED  ] 36 tests.
 ```
 
-All 36 tests passed. The `Tracker`-based tests confirmed that every constructor call is now matched by a destructor call — no leaks on `append` (resize path), `remove` (last slot fix), copy constructor, or assignment operator.
+All 36 tests passed. 

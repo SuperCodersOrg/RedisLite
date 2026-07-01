@@ -1,4 +1,4 @@
-# Date: July 1 (Session 2)
+# Date: 30 june (Session 2)
 Duration: 85 minutes
 
 Goal:

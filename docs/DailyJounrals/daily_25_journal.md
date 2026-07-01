@@ -10,13 +10,8 @@ error: no matching function for call to 'HashFunction::generate(const Player&)'
 ## Section 2 — Failed Attempt
 Initially, my thought process was to write a single, massive generic template `template <typename T> int generate(T key)` to handle all possible data types. This approach completely failed conceptually. A single mathematical formula cannot efficiently handle both an `int` (which should just return itself in O(1) time) and a `std::string` (which requires looping over every character). I realized that trying to force a "one-size-fits-all" solution would ruin the performance of primitive types. I abandoned the single template in favor of **Method Overloading**, allowing the C++ compiler to automatically route the data type to a highly specialized algorithm at compile-time.
 
-## Section 3 — Code Reference
-- **Filenames & Lines:**
-  - `hashFunction.cpp` (Lines 9-19: Method overloading for primitives `int`, `char`, `bool` to return O(1) instant hashes).
-  - `hashFunction.cpp` (Lines 21-30: The `std::string` polynomial rolling hash using multiplier 31).
-  - `hashFunction.cpp` (Lines 41-54: The `generateFallback` template interpreting custom objects as raw memory bytes).
 
-## Section 4 — Learning Reflection
+## Section 3 — Learning Reflection
 Today's session on implementing a custom `HashFunction` completely shifted how I view data types in C++. 
 
 By using Method Overloading, I learned how to let the compiler do the heavy lifting. Instead of writing complex `if-else` logic to check variable types at runtime (which slows down the HashMap), overloading determines the correct path during compilation. Primitives get instant conversions, while strings get a careful polynomial distribution to avoid anagram collisions.
